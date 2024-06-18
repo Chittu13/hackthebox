@@ -17,6 +17,8 @@
 - [Squid](https://github.com/aancw/spose.git) Pivoting Open Port Scanner
   - Detecting open port behind squid proxy for CTF and pentest purpose using http proxy method. Only for Python 3 version.
   - ```python3 spose.py --proxy http://192.168.208.189:3128 --target 192.168.208.189```
+  - if you detect new port for example: 8080 then you need to config your proxy in firefox ```HTTP proxy 192.168.208.189``` ```port 3128```
+  - then only you can viste the website http://192.168.208.189:8080
 
 - ## Burp Suite <a name="burp"></a>
 - use ```/manager/html``` or ```/..;/manager/html``` in the middel of ```GET/ HTTP/1.1```
