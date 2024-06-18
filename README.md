@@ -7,6 +7,7 @@
 
 - ## Nmap <a name="nmap"></a>
 - ```nmap -sC -sV -vv -oA nmap/report.txt <ip>```
+- ```sudo nmap -Pn -A -p- -T4 <ip> > nmap.txt```
 
 - ## Burp Suite <a name="burp"></a>
 - use ```/manager/html``` or ```/..;/manager/html``` in the middel of ```GET/ HTTP/1.1```
