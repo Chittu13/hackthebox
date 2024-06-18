@@ -8,6 +8,7 @@
 - [Privilege escalation](#privilegeescalation)
 - [Hydra](#hydra)
 - [FTP](#ftp)
+- [Cewl](#cewl) - It is use to create a worldlist using website link
 
 - ## Nmap <a name="nmap"></a>
 - ```nmap -sC -sV -vv -oA nmap/report.txt <ip>```
@@ -67,3 +68,6 @@
   - 230 Login successful
   - to upload a file use ```put <filename>```
   - to download a file use ```get <filename>```
+
+- ## Cewl <a name="cewl"></a>
+- ```cewl -w passwords.txt http://192.168.245.48:1898/?q=node/1```
