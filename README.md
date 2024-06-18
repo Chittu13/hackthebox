@@ -3,7 +3,7 @@
 - [BurpSuite](#burp)
 - [Gobuster](#gobuster)
 - [FFUF](#ffuf)
-- [Privilege escalation](#privilege escalation)
+- [Privilege escalation](#privilegeescalation)
 
 - ## Nmap <a name="nmap"></a>
 - ```nmap -sC -sV -vv -oA nmap/report.txt <ip>```
@@ -22,7 +22,7 @@
 - ```ffuf -u <url>/FUZZ -k -w /usr/share/dirbuster/wordlists/directory-list-2.3-medium.txt -r -fs 27200```
   - if you are getting the size same of all use filter size and give the size there.
  
-- ## Privilege escalation <a name="privilege escalation"></a>
+- ## Privilege escalation <a name="privilegeescalation"></a>
 - if you find ```/usr/bin/pkexec``` in ```sudo -l``` 
   - then use the below command it will give you the root privilege
   - ```sudo pkexec /bin/bash```
