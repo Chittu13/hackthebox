@@ -1,5 +1,9 @@
 # Hackthebox
 - default page /robots.txt /S3cret-T3xt
+- ftp <ip>
+  - user:anonymous
+  - pass:
+  - 230 Login successful
 - [Nmap](#nmap)
 - [BurpSuite](#burp)
 - [Gobuster](#gobuster)
