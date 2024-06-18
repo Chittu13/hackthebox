@@ -1,5 +1,6 @@
 # Hackthebox
-- default page /robots.txt /S3cret-T3xt
+- default page ```/robots.txt``` ```/S3cret-T3xt```
+- ```find / -name local.txt 2> /dev/null```
 
 - [Nmap](#nmap)
 - [BurpSuite](#burp)
