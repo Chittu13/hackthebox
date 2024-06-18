@@ -13,6 +13,8 @@
   - so it will like this ```GET/ /..;/manager/html HTTP/1.1```
   - whenever you see JSESSIONID=.... use this.
  
+- use ```[]==``` for the password if you don't know the pass 
+ 
 - ## Gobuster <a name="gobuster"></a>
 - ```gobuster dir -u <url> -k -w /usr/share/dirbuster/wordlists/directory-list-2.3-medium.txt```
 
