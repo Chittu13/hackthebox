@@ -37,7 +37,7 @@
   - if you are getting the size same of all use filter size and give the size there.
  
 - ## Privilege escalation <a name="privilegeescalation"></a>
-
+- ```python3 -c 'import os; os.system("/bin/bash")'```
 - Use ```linpeas``` if you are not getting any escalation
   - download the script from the github
 - If It was running on Linux Kernel 4.4.0–31-generic and Ubuntu 14.04.5 LTS. use below command
