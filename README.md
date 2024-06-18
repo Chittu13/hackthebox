@@ -1,4 +1,5 @@
 # Hackthebox
+- default page /robots.txt /S3cret-T3xt
 - [Nmap](#nmap)
 - [BurpSuite](#burp)
 - [Gobuster](#gobuster)
