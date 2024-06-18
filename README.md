@@ -6,8 +6,8 @@
 - [Gobuster](#gobuster)
 - [FFUF](#ffuf)
 - [Privilege escalation](#privilegeescalation)
-- [Hydra](#hydra)
-- [FTP](#ftp)
+- [Hydra](#hydra) - Brute force attack on ssh
+- [FTP](#ftp) 
 - [Cewl](#cewl) - It is use to create a worldlist using website link
 
 - ## Nmap <a name="nmap"></a>
