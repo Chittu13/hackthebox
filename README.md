@@ -14,6 +14,9 @@
 - ## Nmap <a name="nmap"></a>
 - ```nmap -sC -sV -vv -oA nmap/report.txt <ip>```
 - ```sudo nmap -Pn -A -p- -T4 <ip> > nmap.txt```
+- [Squid](https://github.com/aancw/spose.git) Pivoting Open Port Scanner
+  - Detecting open port behind squid proxy for CTF and pentest purpose using http proxy method. Only for Python 3 version.
+  - ```python3 spose.py --proxy http://192.168.208.189:3128 --target 192.168.208.189```
 
 - ## Burp Suite <a name="burp"></a>
 - use ```/manager/html``` or ```/..;/manager/html``` in the middel of ```GET/ HTTP/1.1```
