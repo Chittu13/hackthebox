@@ -4,6 +4,8 @@
   - user:anonymous
   - pass:
   - 230 Login successful
+  - to upload a file use ```put <filename>```
+  - to download a file use ```get <filename>```
 - [Nmap](#nmap)
 - [BurpSuite](#burp)
 - [Gobuster](#gobuster)
