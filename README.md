@@ -1,5 +1,5 @@
 # Hackthebox
-- default page ```/robots.txt``` ```/S3cret-T3xt``` ```/secret.txt```
+- default page ```/robots.txt``` ```/secret.txt```
 - ```find / -name local.txt 2> /dev/null```
 - [Reverse_Shell_Script](https://revshells.com)
 
