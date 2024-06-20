@@ -1,6 +1,7 @@
 # Hackthebox
 - default page ```/robots.txt``` ```/secret.txt```
 - ```find / -name local.txt 2> /dev/null```
+- ``` find -type d -name ".*" 2>/dev/null``` it will check hidden directories.
 - [Reverse_Shell_Script](https://revshells.com)
 
 - [Nmap](#nmap)
