@@ -9,6 +9,7 @@
 - [Gobuster](#gobuster)
 - [FFUF](#ffuf)
 - [Privilege escalation](#privilegeescalation)
+- [Mysql](#mysql)
 - [Hydra](#hydra) - Brute force attack on ssh
 - [FTP](#ftp) 
 - [Cewl](#cewl) - It is use to create a worldlist using website link
@@ -87,6 +88,9 @@
 - if you find ```(ALL : ALL) NOPASSWD: /usr/bin/perl``` in ```sudo -l```
   - then use the below command it will give you the root privilege
   - ```sudo perl -e 'exec "/bin/bash";'```
+
+- ## Mysql <a name="mysql"></a>
+- ```mysql -u root -p -h $ip```
 
 - ## Hydra <a name="hydra"></a>
 - ssh renu@127.0.0.1
