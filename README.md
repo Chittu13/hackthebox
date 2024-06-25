@@ -33,6 +33,7 @@
  
 - ## Gobuster <a name="gobuster"></a>
 - ```gobuster dir -u <url> -k -w /usr/share/dirbuster/wordlists/directory-list-2.3-medium.txt```
+-  ```gobuster dir -w /usr/share/seclists/Discovery/Web-Content/directory-list-2.3-medium.txt -u http://192.168.60.132 -t 50 -x php,txt -o  gobuster.txt```  
 
 - ## FFUF <a name="ffuf"></a>
 - FFUF is used to filter the invalid pages 
