@@ -136,5 +136,9 @@
 <script>alert(document.cookie)</script>
 ```
 
+```js
+<img src="" onerror=alert(document.cookie)>
+```
+
 
 
