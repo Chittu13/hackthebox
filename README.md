@@ -50,6 +50,9 @@ gobuster dir -w /usr/share/wordlists/dirb/big.txt -u http://192.168.54.84 -t 100
 - ```ffuf -u <url>/FUZZ -k -w /usr/share/dirbuster/wordlists/directory-list-2.3-medium.txt```
 - ```ffuf -u <url>/FUZZ -k -w /usr/share/dirbuster/wordlists/directory-list-2.3-medium.txt -r -fs 27200```
   - if you are getting the size same of all use filter size and give the size there.
+```
+ffuf -u http://test.com -c -w /usr/share/seclists/Discovery/DNS/subdomains-top1million-5000.txt -H ‘Host: FUZZ.test.com’ -fs 0 -fs 65
+```
 
 - ## Nikto <a name="nikto"></a>
 - ```nikto -h http://127.0.0.1```
