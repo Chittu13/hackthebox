@@ -1,3 +1,4 @@
+[gtfobins](https://gtfobins.github.io/)
 - __Finding SUID__
   - __`find / -perm -4000 2>/dev/null`__
 
