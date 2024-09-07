@@ -4,7 +4,7 @@
 
 - __`sudo -l`__
   - __If you see this output `(root) NOPASSWD:/usr/bin/find`__
-    - __`sudo find . -exec /bin/sh \; -quit` or without sudo also you can run __
+    - __`sudo find . -exec /bin/sh \; -quit` or without sudo also you can run__
 
 - __Check for cronjob__
   - __It is used to execute file every 1m or 5m__
