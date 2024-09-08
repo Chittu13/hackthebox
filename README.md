@@ -123,7 +123,6 @@ ffuf -u http://test.com -c -w /usr/share/seclists/Discovery/DNS/subdomains-top1m
 
 - ## Hydra <a name="hydra"></a>
 - ssh renu@127.0.0.1
-- if you don't know the password do brute force attack. replace username with ```renu``` and ipaddress with ```127.0.01```
 - ```hydra -l <username> -P /usr/share/wordlists/rockyou.txt <ipaddress> ssh -t 50```
 - ```hydra -L users.txt -P passwords.txt ssh://192.168.245.48 -t 4 > hydra.txt```
 - ```hydra -l root -P /usr/share/wordlists/rockyou.txt $ip mysql```
