@@ -81,3 +81,15 @@ __`nmap -Pn -sS -sV -p 80,443 -f --data-length 200 -D <gate_way_ip>` remove last
 __`nmap -g 53 <target IP>`__
 + __Nmap will send packets with a source port of 53__
 + __so it apperse as request is comming from the DNS server because 53 port is a DNS server__
+
+
+
+# Enumeration
+- ## Nmap <a name="nmap"></a>
+- ```nmap -sC -sV -vv -oA nmap/report.txt <ip>```
+- ```sudo nmap -Pn -A -p- -T4 <ip> -o nmap.txt```
+- [Squid](https://github.com/aancw/spose.git) Pivoting Open Port Scanner
+  - Detecting open port behind squid proxy for CTF and pentest purpose using http proxy method. Only for Python 3 version.
+  - ```python3 spose.py --proxy http://192.168.208.189:3128 --target 192.168.208.189```
+  - if you detect new port for example: 8080 then you need to config your proxy in firefox set ```HTTP proxy 192.168.208.189``` and ```port 3128```
+  - then only you can viste the website http://192.168.208.189:8080
