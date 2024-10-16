@@ -21,6 +21,9 @@
 - [Simple Local Web Servers](#localweb)
 - [RDP-3389](#rdp)
 
+- ## Cewl <a name="cewl"></a>
+- ```cewl -w passwords.txt http://192.168.245.48:1898/?q=node/1```
+
 
 # Enumeration
 - ## Nmap <a name="nmap"></a>
@@ -87,16 +90,6 @@ ffuf -u http://test.com -c -w /usr/share/seclists/Discovery/DNS/subdomains-top1m
   - 230 Login successful
   - to upload a file use ```put <filename>```
   - to download a file use ```get <filename>```
-
-
-
-
-
-- ## Cewl <a name="cewl"></a>
-- ```cewl -w passwords.txt http://192.168.245.48:1898/?q=node/1```
-
-
-
 
 
 
