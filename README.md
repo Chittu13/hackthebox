@@ -18,7 +18,7 @@
 - [Cross-Site Scripting](#xxs)
 - [Brute-force attack](#bruteforce)
 - [Password Cracking](#cracking)
-- [Simple Local Web Servers](#Localweb)
+- [Simple Local Web Servers](#localweb)
 - [RDP](#rdp)
 
 
@@ -237,7 +237,7 @@ john --format=descrypt --wordlist /usr/share/wordlists/rockyou.txt hash.txt
 
 
 
-- ## Simple Local Web Servers <a name="Localweb"></a>
+- ## Simple Local Web Servers <a name="localweb"></a>
 
 ```
 python -m SimpleHTTPServer 80
