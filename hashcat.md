@@ -1,3 +1,9 @@
+- __[Cyber-Chef](https://gchq.github.io/CyberChef/)__
+- __[Hash_Finder](https://www.tunnelsup.com/hash-analyzer/)__
+- __[Decode_hashs](https://10015.io/tools/md5-encrypt-decrypt) like sha,md5...__
+  - __[CrackStation](https://crackstation.net/) Altarnative online tool for hack crakcing ntlm,md5,md4,sha__
+
+
 - __`hashid-m 'hash'`__
 
 - **`hash-identifier '<hash_in_quotes>'`**
@@ -28,7 +34,7 @@ hashcat -m 3200 '$2y$12$Dwt1BZj6pcyc3Dy1FWZ5ieeUznr71EeNkJkUlypTsgbX1H68wsRom' /
 ```
 
 - __You need to filter the below word list__
- -  `/usr/share/wordlists/SecLists/Fuzzing/1-4_all_letters_a-z.txt`
+ -  __`/usr/share/wordlists/SecLists/Fuzzing/1-4_all_letters_a-z.txt`__
  -  __To get the words containg 4 characters__
   - __grep -E ‘^[a-zA-Z]{4}$’ /usr/share/wordlists/SecLists/Fuzzing/1-4_all_letters_a-z.txt > filteredwords.txt__
-  - `hashcat -m 3200 '$2y$12$Dwt1BZj6pcyc3Dy1FWZ5ieeUznr71EeNkJkUlypTsgbX1H68wsRom' filteredwords.txt`
+  - __`hashcat -m 3200 '$2y$12$Dwt1BZj6pcyc3Dy1FWZ5ieeUznr71EeNkJkUlypTsgbX1H68wsRom' filteredwords.txt`__
