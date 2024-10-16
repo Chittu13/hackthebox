@@ -3,25 +3,24 @@
 - ```find / -name local.txt 2> /dev/null```
 - ``` find -type d -name ".*" 2>/dev/null``` it will check hidden directories.
 - [Useful_links](/links.md)
-- [netcat](#nc)
-- [Reverse_Shell_Script](https://revshells.com)
 - [Nmap](/nmap.md)
 - [Nmap](#nmap)
 - [BurpSuite](#burp)
 - [Gobuster](#gobuster)
 - [FFUF](#ffuf)
 - [Nikto](#nikto)
-
 - [Mysql](#mysql)
+- [Cewl](#cewl) - It is use to create a worldlist using website link
 - [Hydra](#hydra) - Brute force attack on ssh
 - [FTP](#ftp)
-- [Metasploit](/metasploit.md)
-- [Cewl](#cewl) - It is use to create a worldlist using website link
 - [Brute-force attack](#bruteforce)
 - [Password Cracking](#cracking)
-- [Simple Local Web Servers](#localweb)
 - [RDP-3389](#rdp)
+- [Metasploit](/metasploit.md)
+- [netcat](#nc)
+- [Reverse_Shell_Script](https://revshells.com)
 - [Privilege escalation](/Privilege.md)
+- [Simple Local Web Servers](#localweb)
 
 - ## Cewl <a name="cewl"></a>
 - ```cewl -w passwords.txt http://192.168.245.48:1898/?q=node/1```
