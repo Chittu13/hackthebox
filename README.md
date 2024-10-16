@@ -5,6 +5,7 @@
 - [Useful_links](/links.md)
 - [netcat](#nc)
 - [Reverse_Shell_Script](https://revshells.com)
+- [Nmap](/nmap.md)
 - [Nmap](#nmap)
 - [BurpSuite](#burp)
 - [Gobuster](#gobuster)
