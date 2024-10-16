@@ -33,6 +33,13 @@ hashcat -m 1800 '$6$aReallyHardSalt$6WKUTqzq.UQQmrm0p/T7MPpMbGNnzXPMAXi4bJMl9be.
 hashcat -m 1000 '1DFECA0C002AE40B8619ECF94819CC1B' /usr/share/wordlists/rockyou.txt
 ```
 
+### HMAC-SHA1 (key = $salt)
+```
+e5d8870e5bdd26602cab8dbe07a942c8669e56d6 
+Salt: tryhackme
+```
+  - `hashcat -m 160 'e5d8870e5bdd26602cab8dbe07a942c8669e56d6' /usr/share/wordlists/rockyou.txt`
+
 ### hash
 ```
 hashcat -m 3200 '$2y$12$Dwt1BZj6pcyc3Dy1FWZ5ieeUznr71EeNkJkUlypTsgbX1H68wsRom' /usr/share/wordlists/rockyou.txt
