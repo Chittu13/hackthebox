@@ -19,7 +19,7 @@
 - [Brute-force attack](#bruteforce)
 - [Password Cracking](#cracking)
 - [Simple Local Web Servers](#localweb)
-- [RDP](#rdp)
+- [RDP-3389](#rdp)
 
 
 # Enumeration
@@ -223,7 +223,7 @@ hydra -l admin -P /usr/share/wordlists/rockyou.txt  127.0.0.1 http-post-form "/D
 ```
 
 
-- ## RDP <a name="rdp"></a>
+- ## RDP-3389 <a name="rdp"></a>
 ```
 xfreerdp /u:administrator /p:qwertyuiop /v:<target> ip:<port_number>
 ```
