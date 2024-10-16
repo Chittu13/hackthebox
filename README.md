@@ -2,8 +2,9 @@
 - default page ```/robots.txt``` ```/secret.txt```
 - ```find / -name local.txt 2> /dev/null```
 - ``` find -type d -name ".*" 2>/dev/null``` it will check hidden directories.
-- [Reverse_Shell_Script](https://revshells.com)
 
+- [netcat](#nc)
+- [Reverse_Shell_Script](https://revshells.com)
 - [Nmap](#nmap)
 - [BurpSuite](#burp)
 - [Gobuster](#gobuster)
@@ -14,7 +15,6 @@
 - [Hydra](#hydra) - Brute force attack on ssh
 - [FTP](#ftp) 
 - [Cewl](#cewl) - It is use to create a worldlist using website link
-- [netcat](#nc)
 - [Cross-Site Scripting](#xxs)
 - [Brute-force attack](#bruteforce)
 - [Password Cracking](#cracking)
