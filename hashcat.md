@@ -1,6 +1,6 @@
 - __`hashid-m 'hash'`__
 
-- **hash-identifier '<hash_in_quotes>'**
+- **`hash-identifier '<hash_in_quotes>'`**
 
 ### MD5
 ```
