@@ -1,7 +1,7 @@
 - __[Cyber-Chef](https://gchq.github.io/CyberChef/)__
 - __[Hash_Finder](https://www.tunnelsup.com/hash-analyzer/)__
 - __[Decode_hashs](https://10015.io/tools/md5-encrypt-decrypt) like sha,md5...__
-  - __[CrackStation](https://crackstation.net/) Altarnative online tool for hack crakcing ntlm,md5,md4,sha__
+  - __[CrackStation](https://crackstation.net/) Alternative online tool for hack crakcing ntlm,md5,md4,sha__
 
 
 - __`hashid-m 'hash'`__
