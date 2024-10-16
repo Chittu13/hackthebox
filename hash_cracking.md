@@ -23,6 +23,11 @@ hashcat -m 0 'CBFDAC6008F9CAB4083784CBD1874F76618D2A97' /usr/share/wordlists/roc
 hashcat -m 1400 '1C8BFE8F801D79745C4631D09FFF36C82AA37FC4CCE4FC946683D7B336B63032' /usr/share/wordlists/rockyou.txt
 ```
 
+### Hash SHA512
+```
+hashcat -m 1800 '$6$aReallyHardSalt$6WKUTqzq.UQQmrm0p/T7MPpMbGNnzXPMAXi4bJMl9be.cfi3/qxIf.hsGpS41BqMhSrHVXgMpdjS6xeKZAs02.' /usr/share/wordlists/rockyou.txt
+```
+
 ### NTLM
 ```
 hashcat -m 1000 '1DFECA0C002AE40B8619ECF94819CC1B' /usr/share/wordlists/rockyou.txt
