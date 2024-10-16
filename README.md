@@ -10,7 +10,7 @@
 - [FFUF](#ffuf)
 - [Nikto](#nikto)
 - [Privilege escalation](#privilegeescalation)
-- [Privilege escalation](/privilege.md)
+- [Privilege escalation](/Privilege.md)
 - [Mysql](#mysql)
 - [Hydra](#hydra) - Brute force attack on ssh
 - [FTP](#ftp) 
