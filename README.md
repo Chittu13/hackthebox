@@ -76,6 +76,9 @@ ffuf -u http://test.com -c -w /usr/share/seclists/Discovery/DNS/subdomains-top1m
 
 
 - ## FTP <a name="ftp"></a>
+```
+nmap -Pn -A -p 21 -T4 --script=ftp-brute.nse --script-args userdb=/root/usr 10.0.1.22  -o namp
+```
 - ftp <ip>
   - user:anonymous
   - pass:
