@@ -14,3 +14,8 @@ hashcat -m 0 'CBFDAC6008F9CAB4083784CBD1874F76618D2A97' /usr/share/wordlists/roc
 ``` 
 hashcat -m 1400 '1C8BFE8F801D79745C4631D09FFF36C82AA37FC4CCE4FC946683D7B336B63032' /usr/share/wordlists/rockyou.txt
 ```
+
+### hash
+```
+hashcat -m 3200 '$2y$12$Dwt1BZj6pcyc3Dy1FWZ5ieeUznr71EeNkJkUlypTsgbX1H68wsRom' /usr/share/wordlists/rockyou.txt
+```
