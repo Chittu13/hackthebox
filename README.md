@@ -9,7 +9,6 @@
 - [Gobuster](#gobuster)
 - [FFUF](#ffuf)
 - [Nikto](#nikto)
-- [Privilege escalation](#privilegeescalation)
 - [Privilege escalation](/Privilege.md)
 - [Mysql](#mysql)
 - [Hydra](#hydra) - Brute force attack on ssh
