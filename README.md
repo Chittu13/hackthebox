@@ -149,7 +149,7 @@ exploit
 - __`xfreerdp /u:administrator /p:password123 /v:<targetip>`__
 
 
-- ## Password Cracking <a name="cracking"></a>
+- # 11. Password Cracking <a name="cracking"></a>
 ### John The Ripper
 ```
 john --format=descrypt --wordlist /usr/share/wordlists/rockyou.txt hash.txt
