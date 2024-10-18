@@ -12,14 +12,13 @@
 - [7. Cewl](#cewl) - It is use to create a worldlist using website link
 - [8. Hydra](#hydra) - Brute force attack on ssh
 - [10.FTP](#ftp)
-- [11. Brute-force attack](#bruteforce)
-- [12. Password Cracking](#cracking)
-- [13. RDP-3389](#rdp)
-- [14. Metasploit](/metasploit.md)
-- [15. netcat](#nc)
-- [16. Reverse_Shell_Script](https://revshells.com)
-- [17. Privilege escalation](/Privilege.md)
-- [18. Simple Local Web Servers](#localweb)
+- [11. Password Cracking](#cracking)
+- [12. RDP-3389](#rdp)
+- [13. Metasploit](/metasploit.md)
+- [14. netcat](#nc)
+- [15. Reverse_Shell_Script](https://revshells.com)
+- [16. Privilege escalation](/Privilege.md)
+- [17. Simple Local Web Servers](#localweb)
 
 - # 7. Cewl <a name="cewl"></a>
 - ```cewl -w passwords.txt http://192.168.245.48:1898/?q=node/1```
