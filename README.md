@@ -12,7 +12,7 @@
 - [7. Cewl](#cewl) - It is use to create a worldlist using website link
 - [8. Hydra](#hydra) - Brute force attack on ssh
 - [9.FTP](#ftp)
-- [10. Password Cracking](#cracking)
+- [10. Password Cracking](/hash_cracking.md)
 - [11. RDP-3389](#rdp)
 - [12. Metasploit](/metasploit.md)
 - [13. netcat](#nc)
@@ -126,11 +126,8 @@ nmap -Pn -A -p 21 -T4 --script=ftp-brute.nse --script-args userdb=/root/usr 10.0
 
 
 
-# 10. Password Cracking <a name="cracking"></a>
-### John The Ripper
-```
-john --format=descrypt --wordlist /usr/share/wordlists/rockyou.txt hash.txt
-```
+# 10. Password Cracking()
+
 
 
 
