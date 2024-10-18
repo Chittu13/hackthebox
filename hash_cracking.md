@@ -3,6 +3,10 @@
 - __[Decode_hashs](https://10015.io/tools/md5-encrypt-decrypt) like sha,md5...__
   - __[CrackStation](https://crackstation.net/) Alternative online tool for hack crakcing ntlm,md5,md4,sha__
 
+### John The Ripper
+```
+john --format=descrypt --wordlist /usr/share/wordlists/rockyou.txt hash.txt
+```
 
 - __`hashid-m 'hash'`__
 
