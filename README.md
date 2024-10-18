@@ -18,7 +18,7 @@
 - [13. netcat](#nc)
 - [14. Reverse_Shell_Script](https://revshells.com)
 - [15. Privilege escalation](/Privilege.md)
-- [16 Email Harversting with theHarvester](#emal)
+- [16 Email Harversting with theHarvester](#email)
 - [17. Simple Local Web Servers](#localweb)
 
 
