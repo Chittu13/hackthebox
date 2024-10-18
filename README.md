@@ -4,7 +4,7 @@
 - ``` find -type d -name ".*" 2>/dev/null``` it will check hidden directories.
 - [Useful_links](/links.md)
 - [1. Nmap](/nmap.md)
-- [2. BurpSuite](#burp)
+- [2. BurpSuite](/burpsuite.md)
 - [3. Gobuster](#gobuster)
 - [4. FFUF](#ffuf)
 - [5. Nikto](#nikto)
