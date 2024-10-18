@@ -126,7 +126,7 @@ nmap -Pn -A -p 21 -T4 --script=ftp-brute.nse --script-args userdb=/root/usr 10.0
 
 
 
-# 10. Password Cracking()
+# 10. [Password Cracking](/hash_cracking.md)
 
 
 
