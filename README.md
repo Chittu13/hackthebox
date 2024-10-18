@@ -128,7 +128,7 @@ __Download the reverse shell in windows__
 
 
 
-- # 13. RDP-3389 <a name="rdp"></a>
+- # 12. RDP-3389 <a name="rdp"></a>
 
 - `hydra -L /usr/share/metasploit-framework/data/wordlists/common_users.txt -P /user/share/metasploit-framework/data/wordlists/unix_passwords.txt rdp://<target ip> -s <target port>`
 
