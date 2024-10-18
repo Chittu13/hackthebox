@@ -21,14 +21,10 @@
 - [17. Privilege escalation](/Privilege.md)
 - [18. Simple Local Web Servers](#localweb)
 
-- ## Cewl <a name="cewl"></a>
+- # 7. Cewl <a name="cewl"></a>
 - ```cewl -w passwords.txt http://192.168.245.48:1898/?q=node/1```
 
-
-
-
-
-- ## Gobuster <a name="gobuster"></a>
+- # 3. Gobuster <a name="gobuster"></a>
 ```
 gobuster dir -u <url> -k -w /usr/share/dirbuster/wordlists/directory-list-2.3-medium.txt
 ```
@@ -41,7 +37,7 @@ gobuster dir -w /usr/share/wordlists/dirb/big.txt -u http://192.168.54.84 -t 100
 ```  
 
 
-- ## FFUF <a name="ffuf"></a>
+- # 4. FFUF <a name="ffuf"></a>
 - FFUF is used to filter the invalid pages 
 - ```ffuf -u <url>/FUZZ -k -w /usr/share/dirbuster/wordlists/directory-list-2.3-medium.txt```
 - ```ffuf -u <url>/FUZZ -k -w /usr/share/dirbuster/wordlists/directory-list-2.3-medium.txt -r -fs 27200```
@@ -50,19 +46,19 @@ gobuster dir -w /usr/share/wordlists/dirb/big.txt -u http://192.168.54.84 -t 100
 ffuf -u http://test.com -c -w /usr/share/seclists/Discovery/DNS/subdomains-top1million-5000.txt -H ‘Host: FUZZ.test.com’ -fs 0 -fs 65
 ```
 
-- ## Nikto <a name="nikto"></a>
+- # 5. Nikto <a name="nikto"></a>
 - ```nikto -h http://127.0.0.1```
 
 
 
 
-- ## Mysql <a name="mysql"></a>
+- # 6. Mysql <a name="mysql"></a>
 - ```mysql -u root -p -h $ip```
 
 
 
 
-- ## Hydra <a name="hydra"></a>
+- # 8. Hydra <a name="hydra"></a>
 - `hydra -C <combinations.txt> <ip> <service>`
 - ```hydra -l <username> -P /usr/share/wordlists/rockyou.txt <ipaddress> ssh -t 50```
 - ```hydra -L users.txt -P passwords.txt ssh://192.168.245.48 -t 4 > hydra.txt```
