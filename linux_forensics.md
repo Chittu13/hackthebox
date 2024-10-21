@@ -11,4 +11,4 @@
 - __`/var/log/auth.log`__
 
 ### Network Configuration
-- __To find information about the network interfaces, we can cat the `/etc/network/interfaces` file__
+- __To find information about the network interfaces, we can `cat` the `/etc/network/interfaces` file__
