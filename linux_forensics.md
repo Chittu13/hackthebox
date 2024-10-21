@@ -21,3 +21,7 @@
 ### 5. Running processes
 - __If performing forensics on a live system, it is helpful to check the running processes. The `ps` utility shows details about the running processes.__
   - __`ps aux`__
+ 
+### 6. Service startup
+- __Like Windows, services can be set up in Linux that will start and run in the background after every system boot. A list of services can be found in the `/etc/init.d` directory.__
+  - __`ls /etc/init.d/`__
