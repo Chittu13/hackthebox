@@ -17,3 +17,7 @@
 ### 4. Active network connections
 - __On a live system, knowing the active network connections provides additional context to the investigation. We can use the `netstat` utility to find active network connections on a Linux host.__
   - __`netstat -natp`__
+ 
+### 5. Running processes
+- __If performing forensics on a live system, it is helpful to check the running processes. The `ps` utility shows details about the running processes.__
+  - __`ps aux`__
