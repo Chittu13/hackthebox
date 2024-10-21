@@ -1,5 +1,6 @@
 - ## Privilege escalation <a name="privilegeescalation"></a>
 - ```python3 -c 'import os; os.system("/bin/bash")'```
+- ```python -c 'import pty; pty.spawn("/bin/bash")'```
 - ```find /  -perm -u=s -type f 2>/dev/null``` to see the permission```
 - Use ```linpeas``` if you are not getting any escalation
   - download the script from the github
