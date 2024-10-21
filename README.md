@@ -1,4 +1,5 @@
 # Hackthebox
+- [Linux Forensics](/linux_forensics.md)
 - default page ```/robots.txt``` ```/secret.txt```
 - ```find / -name local.txt 2> /dev/null```
 - ``` find -type d -name ".*" 2>/dev/null``` it will check hidden directories.
@@ -23,6 +24,7 @@
 - [17. Email Harversting with theHarvester](#email)
 - [18 Mimikatz](#mimi)
 - [18. Simple Local Web Servers](#localweb)
+- Linux Forensics
 
 
 
