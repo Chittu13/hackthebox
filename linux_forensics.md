@@ -1,0 +1,2 @@
+```cat /etc/os-release```
+```cat /etc/passwd| column -t -s :``` or ```cat /etc/passwd```
