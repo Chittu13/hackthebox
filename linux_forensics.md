@@ -16,4 +16,4 @@
 
 ### 4. Active network connections
 - __On a live system, knowing the active network connections provides additional context to the investigation. We can use the `netstat` utility to find active network connections on a Linux host.__
-  - `__netstat -natp`__
+  - __`netstat -natp`__
