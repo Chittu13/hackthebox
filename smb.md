@@ -2,9 +2,10 @@
 ```
 smbclient -L 192.168.122.148
 ```
-![image2](/Image/image1(1).png)
+![image1](/Image/image1(1).png)
 
 - `__smbclient //192.168.122.148/Anonymous__`
+![image2](/Image/image2.png)
 
 # NetBIOS & SMB Enumberation
 
