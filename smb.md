@@ -1,3 +1,11 @@
+# Enumeration
+```
+smbclient -L 192.168.122.148
+```
+![image2](/Image/image1(1).png)
+
+
+
 # NetBIOS & SMB Enumberation
 
 ## NetBIOS (Network Basic Input/Output System)
