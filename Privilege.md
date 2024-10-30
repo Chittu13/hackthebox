@@ -6,6 +6,8 @@
 exec "/bin/sh";
 perl —e 'exec "/bin/sh";'
 ```
+- `os.execute('/bin/sh')`
+- `exec "/bin/sh"`
 - ```find /  -perm -u=s -type f 2>/dev/null``` to see the permission```
 - Use ```linpeas``` if you are not getting any escalation
   - download the script from the github
