@@ -8,3 +8,4 @@
 ### Domain enum
 - [crt.sh](https://crt.sh/)
 - [dnsdumpster.com](https://dnsdumpster.com/)
+- [Sublist3r](https://github.com/aboul3la/Sublist3r.git)
