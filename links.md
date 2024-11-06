@@ -4,3 +4,7 @@
   - [CrackStation](https://crackstation.net/) Altarnative online tool for hack crakcing ntlm,md5,md4,sha
  
 - [gtfobins](https://gtfobins.github.io/)
+
+### Domain enum
+- [crt.sh](https://crt.sh/)
+- [dnsdumpster.com](https://dnsdumpster.com/)
