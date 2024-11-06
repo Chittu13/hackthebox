@@ -1,4 +1,11 @@
 - ## Privilege escalation <a name="privilegeescalation"></a>
+- `cat /etc/issue`
+```
+find / -o -group `id -g` -perm \ 
+ -g=w -perm -u=s -o -perm -o=w\
+ -perm -u=s -o -perm -o=w \
+ -perm -g=s -ls
+```
 - ```python3 -c 'import os; os.system("/bin/bash")'```
 - ```python -c 'import pty; pty.spawn("/bin/bash")'```
 - `echo os.system('/bin/bash')`
