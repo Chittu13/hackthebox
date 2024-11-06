@@ -11,3 +11,4 @@
 - [Sublist3r.git](https://github.com/aboul3la/Sublist3r.git)
 - [SubDomainizer.git](https://github.com/nsonaniya2010/SubDomainizer.git)
 - [knock.git](https://github.com/guelfoweb/knock.git)
+- [subbrute.git](https://github.com/TheRook/subbrute.git)
