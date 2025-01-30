@@ -2,6 +2,9 @@
 - [Linux Forensics](/linux_forensics.md)
 - default page ```/robots.txt``` ```/secret.txt```
 - ```find / -name local.txt 2> /dev/null```
+- `find / -iname user.txt -exec wc {} \;`
+- `find / -iname root.txt -exec wc {} \;`
+
 - ``` find -type d -name ".*" 2>/dev/null``` it will check hidden directories.
 - [Useful_links](/links.md)
 - [1. Nmap](/nmap.md)
