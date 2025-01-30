@@ -12,6 +12,9 @@ unbind C-b
 set -g history-limit 1000000
 set -g allow-rename off
 
+# Enable mouse support
+set -g mouse on
+
 # Load tmux-logging plugin
 set -g @plugin 'tmux-plugins/tmux-logging'
 
@@ -24,11 +27,15 @@ bind-key j command-prompt -p "Join pane from:" "join-pane -s '%%'"
 bind-key s command-prompt -p "Send pane to:" "join-pane -t '%%'"
 
 # Use vi keybindings in copy mode
-set-window-option -g mode-keys vi
+set -g mode-keys vi
+
+# Automatically copy text to clipboard after selection
+bind -T copy-mode-vi MouseDragEnd1Pane send-keys -X copy-pipe "xclip -selection clipboard"
 
 # Ensure the plugin runs correctly
 run-shell /opt/tmux-logging/logging.tmux
 ```
+- __sudo apt install xclip__
 
 - __Check tmux is working__
   - __`Ctrl+a then press i`__
