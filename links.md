@@ -5,6 +5,8 @@
  
 - [gtfobins](https://gtfobins.github.io/)
 
+- [revshells](https://www.revshells.com/)
+
 ### Domain enum
 - [crt.sh](https://crt.sh/)
 - [dnsdumpster.com](https://dnsdumpster.com/)
