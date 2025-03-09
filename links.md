@@ -1,11 +1,17 @@
+### Linux Privilege Escalation
+- [gtfobins](https://gtfobins.github.io/)
+
+### Reverse Shell
+- [revshells.com](https://www.revshells.com/)
+
+
+### Encrypt & Decrypt
 - [Cyber-Chef](https://gchq.github.io/CyberChef/)
 - [Hash_Finder](https://www.tunnelsup.com/hash-analyzer/)
 - [Decode_hashs](https://10015.io/tools/md5-encrypt-decrypt) like sha,md5...
-  - [CrackStation](https://crackstation.net/) Altarnative online tool for hack crakcing ntlm,md5,md4,sha
- 
-- [gtfobins](https://gtfobins.github.io/)
+  - [CrackStation.ne](https://crackstation.net/) Altarnative online tool for hack crakcing ntlm,md5,md4,sha
 
-- [revshells](https://www.revshells.com/)
+
 
 ### Domain enum
 - [crt.sh](https://crt.sh/)
