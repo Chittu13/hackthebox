@@ -39,12 +39,21 @@ run-shell /opt/tmux-logging/logging.tmux
 
 - __Create a new session__
   - __`tmux new -s HTB`__
-- __To list the tmux sessions__
-  - __`tmux ls`__
-- __To open the tmux session__
-  - __`tmux attach`__
 - __Check tmux is working__
   - __`Ctrl+a then press i`__
+- __background and close__
+  - __`Ctrl+a then press x`__ to close
+  - __`Ctrl+a then press d`__ to keep in background
+
+- __To list the tmux sessions__
+  - __`tmux ls`__
+
+- __To open the tmux session__
+  - __`tmux attach`__
+  - __`tmux attach -t <seesion_name>`__
+
+
+
 
 - __`sudo git clone https://github.com/tmux-plugins/tmux-logging.git /opt/tmux-logging/`__
 - __`tmux source-file ~/.tmux.conf`__
