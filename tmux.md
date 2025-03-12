@@ -52,6 +52,8 @@ run-shell /opt/tmux-logging/logging.tmux
   - __`tmux attach`__
   - __`tmux attach -t <seesion_name>`__
 
+- __List all the sessions and tabs__
+  - __`Ctrl + a w`__
 
 
 
@@ -63,6 +65,7 @@ run-shell /opt/tmux-logging/logging.tmux
     - __`ctrl+a shift+p`__
   - __Stop__
     - __`ctrl+a shift+p`__
+
 
 
 - To rename the tab 
@@ -79,11 +82,6 @@ run-shell /opt/tmux-logging/logging.tmux
 
 - To split the screen horizontal 
   - Ctrl+a shitf+%
-
-- To close split screen 
-  - Ctrl+a then press x 
-  - or 
-  - exit
 
 - To resize that split screen
   - Ctrl+a then press hold Ctrl < (left arrow <---)
