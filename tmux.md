@@ -39,7 +39,10 @@ run-shell /opt/tmux-logging/logging.tmux
 
 - __Create a new session__
   - __`tmux new -s HTB`__
-  
+- __To list the tmux sessions__
+  - __`tmux ls`__
+- __To open the tmux session__
+  - __`tmux attach`__
 - __Check tmux is working__
   - __`Ctrl+a then press i`__
 
