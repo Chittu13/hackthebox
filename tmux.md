@@ -37,15 +37,20 @@ run-shell /opt/tmux-logging/logging.tmux
 ```
 - __sudo apt install xclip__
 
+- __Create a new session__
+  - __`tmux new -s HTB`__
+  
 - __Check tmux is working__
   - __`Ctrl+a then press i`__
 
 - __`sudo git clone https://github.com/tmux-plugins/tmux-logging.git /opt/tmux-logging/`__
-
-
 - __`tmux source-file ~/.tmux.conf`__
 
-- __`ctrl+a shift+p`__ 
+### 1. To record the logs
+  - __Start__
+    - __`ctrl+a shift+p`__
+  - __Stop__
+    - __`ctrl+a shift+p`__
 
 
 - To rename the tab 
