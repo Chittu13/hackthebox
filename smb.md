@@ -1,11 +1,13 @@
-# Enumeration
 ```
-smbclient -L 192.168.122.148
+smbclient -L 192.168.122.148 - Here you will get sharename for example: Anonymous
+smbclient //192.168.122.148/Anonymous   - Check for the all sharename
+enum4linux -a 192.168.55.112
+smbclient -L 10.0.1.22 -N
+rpcclient -U "" -N 10.0.1.22
 ```
-![image1](/Image/image1(1).png)
 
-- __`smbclient //192.168.122.148/Anonymous`__
-![image2](/Image/image2.png)
+
+
 
 # NetBIOS & SMB Enumberation
 
