@@ -26,7 +26,6 @@
 - [16. Privilege escalation](/Privilege.md)
 - [17. Email Harversting with theHarvester](#email)
 - [18. Simple Local Web Servers](#localweb)
-- Linux Forensics
 
 # Windows
 - [I. certutil](#certutil)
