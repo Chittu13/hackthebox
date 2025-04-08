@@ -15,7 +15,7 @@ perl —e 'exec "/bin/sh";'
 ```
 - `os.execute('/bin/sh')`
 - `exec "/bin/sh"`
-- ```find /  -perm -u=s -type f 2>/dev/null``` to see the permission```
+- ```find /  -perm -u=s -type f 2>/dev/null``` to see the permission
 - Use ```linpeas``` if you are not getting any escalation
   - download the script from the github
 - If It was running on Linux Kernel 4.4.0–31-generic and Ubuntu 14.04.5 LTS. use below command
