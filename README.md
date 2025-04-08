@@ -1,11 +1,13 @@
 # Hackthebox
-- [Linux Forensics](/linux_forensics.md)
-- default page ```/robots.txt``` ```/secret.txt```
-- ```find / -name local.txt 2> /dev/null```
-- `find / -iname user.txt -exec wc {} \;`
-- `find / -iname root.txt -exec wc {} \;`
 
-- ``` find -type d -name ".*" 2>/dev/null``` it will check hidden directories.
+- ```find /  -perm -u=s -type f 2>/dev/null``` to see the permission
+- 
+## Find the flag file
+  - ```find / -name local.txt 2> /dev/null```
+  - `find / -iname user.txt -exec wc {} \;`
+  - `find / -iname root.txt -exec wc {} \;`
+  - ``` find -type d -name ".*" 2>/dev/null``` it will check hidden directories.
+- [Linux Forensics](/linux_forensics.md)
 - [Useful_links](/links.md)
 - [1. Nmap](/nmap.md)
 - [2. BurpSuite](/burpsuite.md)
