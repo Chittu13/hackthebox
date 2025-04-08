@@ -1,7 +1,7 @@
 # Hackthebox
 
 - ```find /  -perm -u=s -type f 2>/dev/null``` to see the permission
-- 
+  
 ## Find the flag file
   - ```find / -name local.txt 2> /dev/null```
   - `find / -iname user.txt -exec wc {} \;`
