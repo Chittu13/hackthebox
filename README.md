@@ -123,7 +123,8 @@ ffuf -u http://test.com -c -w /usr/share/seclists/Discovery/DNS/subdomains-top1m
   - `set verbose true`
   - `exploit`
  
-
+Downloading a file from a remote system.
+- `scp user@10.10.10.10:/home/user/secret.zip .`
 
 
 
