@@ -1,4 +1,5 @@
 - ## Privilege escalation <a name="privilegeescalation"></a>
+- # easy way to get root/root.txt
 - `cat /etc/issue`
 ```
 find / -o -group `id -g` -perm \ 
