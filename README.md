@@ -45,6 +45,9 @@
 - __`sudo apt-get install sublist3r`__
 - __`sublist3r -d <domain name>` or `sublist3r -d <domain name> -e google,yahoo`__
 
+```
+ffuf -w /usr/share/seclists/Discovery/DNS/subdomains-top1million-5000.txt -u http://cyprusbank.thm/  -H 'Host: FUZZ.cyprusbank.thm' -fw 1
+```
 
 # 3. Gobuster <a name="gobuster"></a>
 ```
@@ -71,9 +74,19 @@ gobuster dir -w /usr/share/wordlists/dirb/big.txt -u http://192.168.54.84 -t 100
 - ```ffuf -u <url>/FUZZ -k -w /usr/share/dirbuster/wordlists/directory-list-2.3-medium.txt```
 - ```ffuf -u <url>/FUZZ -k -w /usr/share/dirbuster/wordlists/directory-list-2.3-medium.txt -r -fs 27200```
   - if you are getting the size same of all use filter size and give the size there.
+subdomain
 ```
 ffuf -u http://test.com -c -w /usr/share/seclists/Discovery/DNS/subdomains-top1million-5000.txt -H ‘Host: FUZZ.test.com’ -fs 0 -fs 65
 ```
+
+```
+ffuf -u 'http://cyprusbank.thm/' -H "Host: FUZZ.cyprusbank.thm" -w /usr/share/seclists/Discovery/DNS/subdomains-top1million-20000.txt -mc all -t 100 -ic -fw 1
+```
+
+```
+ffuf -w /usr/share/seclists/Discovery/DNS/subdomains-top1million-5000.txt -u http://cyprusbank.thm/  -H 'Host: FUZZ.cyprusbank.thm' -fw 1
+```
+
 
 
 
