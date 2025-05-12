@@ -13,7 +13,7 @@
 - [Useful_links](/links.md)
 - [0. Service Port](/port.md)
 - [1. Nmap](/nmap.md)
-- [2. Subdomain Enumeration With Sublist3r](#subdomain)
+- [2. Subdomain Enum](#subdomain)
 - [3. Gobuster](#gobuster)
 - [4. FFUF](#ffuf)
 - [5. Nikto](#nikto)
@@ -41,7 +41,7 @@
 # [1. Nmap](/nmap.md)
 
 
-# 2. Subdomain Enumeration With Sublist3r <a name="subdomain"></a>
+# 2. Subdomain Enum <a name="subdomain"></a>
 - __`sudo apt-get install sublist3r`__
 - __`sublist3r -d <domain name>` or `sublist3r -d <domain name> -e google,yahoo`__
 
