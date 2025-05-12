@@ -58,6 +58,7 @@
 - `ffuf -u <url>/FUZZ -k -w /usr/share/dirbuster/wordlists/directory-list-2.3-medium.txt`
 - __if you are getting the size same of all use filter size and give the size there. subdomain__
   - `ffuf -u <url>/FUZZ -k -w /usr/share/dirbuster/wordlists/directory-list-2.3-medium.txt -r -fs 27200`
+- `wfuzz -u http://target-ip/path/index.php?action=authenticate -d 'username=admin&password=FUZZ' -w /usr/share/wordlists/rockyou.txt`
 
 
 # 3. Subdomain Enum <a name="subdomain"></a>
