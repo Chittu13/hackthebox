@@ -15,10 +15,11 @@
 - [1. Nmap](#nmap)
 - [2. Endpoints Enum](#endpoint)
 - [3. Subdomain Enum](#subdomain)
+- [4. Hydra](#hydra)
 - [6. Mysql](#mysql)
 - [7. Cewl](#cewl) - It is use to create a worldlist using website link
 - [8. SSH](#ssh)
-- [9. Hydra](#hydra) - Brute force attack on ssh
+
 - [10.FTP](#ftp)
 - [11. shell upgreade](#shell)
 - [12. Post-Exploit Enumeration](#post)
@@ -68,29 +69,10 @@
 - __`sublist3r -d <domain name>` or `sublist3r -d <domain name> -e google,yahoo`__
 
 
-# 6. Mysql <a name="mysql"></a>
-- ```mysql -u root -p -h $ip```
 
 
+# 4. Hydra <a name="hydra"></a>
 
-
-
-# 7. Cewl <a name="cewl"></a>
-- ```cewl -w passwords.txt http://192.168.245.48:1898/?q=node/1```
-
-
-
-
-
-# 8. SSH <a name="ssh"></a>
-
-- Downloading a file from a remote system.
-  - `scp user@10.10.10.10:/home/user/secret.zip .`
-- [SSH](/ssh.md)
-
-
-
-# 9. Hydra <a name="hydra"></a>
 - `hydra -C <combinations.txt> <ip> <service>`
 - ```hydra -l <username> -P /usr/share/wordlists/rockyou.txt <ipaddress> ssh -t 50```
 - ```hydra -L users.txt -P passwords.txt ssh://192.168.245.48 -t 4 > hydra.txt```
@@ -122,6 +104,28 @@ hydra -l admin -P /usr/share/wordlists/rockyou.txt 127.0.0.1 ssh
 - http://127.0.0.0/DVWA/vulnerabilities/brute/index.php
 
 - `hydra -l admin -P /usr/share/wordlists/rockyou.txt  127.0.0.1 http-post-form "/DVWA/vulnerabilities/brute/index.php:userField=^USER^:passwordField=^PASS^"`
+
+
+
+# 6. Mysql <a name="mysql"></a>
+- ```mysql -u root -p -h $ip```
+
+
+
+
+
+# 7. Cewl <a name="cewl"></a>
+- ```cewl -w passwords.txt http://192.168.245.48:1898/?q=node/1```
+
+
+
+
+
+# 8. SSH <a name="ssh"></a>
+
+- Downloading a file from a remote system.
+  - `scp user@10.10.10.10:/home/user/secret.zip .`
+- [SSH](/ssh.md)
 
 
 
