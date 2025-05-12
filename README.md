@@ -84,8 +84,9 @@
 
 # 8. SSH <a name="ssh"></a>
 
-Downloading a file from a remote system.
-- `scp user@10.10.10.10:/home/user/secret.zip .`
+- Downloading a file from a remote system.
+  - `scp user@10.10.10.10:/home/user/secret.zip .`
+- [SSH](/ssh.md)
 
 
 
