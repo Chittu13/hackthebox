@@ -12,9 +12,10 @@
 - [Linux Forensics](/linux_forensics.md)
 - [Useful_links](/links.md)
 - [0. Service Port](/port.md)
-- [1. Nmap](/nmap.md)
-- [2. Subdomain Enum](#subdomain)
-- [3. Gobuster](#gobuster)
+- [1. Nmap](#nmap)
+- [2. Endpoints Enum](#endpoint)
+- [3. Subdomain Enum](#subdomain)
+
 - [4. FFUF](#ffuf)
 - [5. Nikto](#nikto)
 - [6. Mysql](#mysql)
@@ -38,65 +39,36 @@
 - [I. certutil](#certutil)
 - [II. Mimikatz](/Notes/mimi.md)
 
-# [1. Nmap](/nmap.md)
+# 1. Nmap  <a name="nmap"></a>
+- `nmap -pn -p- -A -T4 <ip> -o result`
+- [Nmap](/nmap.md)
+
+# 2. Endpoints Enum <a name="endpoint"></a>
+
+##### dirb
+- `dirb http://10.10.10.129`
+
+##### gobuster
+- `gobuster dir -u <url>  -w /usr/share/wordlists/seclists/Discovery/Web-Content/directory-list-2.3-medium.txt`
+- `gobuster dir -u <url> -k -w /usr/share/wordlists/seclists/Discovery/Web-Content/directory-list-2.3-medium.txt`
+- `gobuster dir -w /usr/share/seclists/Discovery/Web-Content/directory-list-2.3-medium.txt -u http://192.168.60.132 -t 50 -x php,txt -o  gobuster.txt`
+- `gobuster dir -w /usr/share/wordlists/dirb/big.txt -u http://192.168.54.84 -t 100 -x .html,.txt,.php `
+
+##### ffuf 
+- `ffuf -u <url>/FUZZ -k -w /usr/share/dirbuster/wordlists/directory-list-2.3-medium.txt`
+- __if you are getting the size same of all use filter size and give the size there. subdomain__
+  - `ffuf -u <url>/FUZZ -k -w /usr/share/dirbuster/wordlists/directory-list-2.3-medium.txt -r -fs 27200`
 
 
-# 2. Subdomain Enum <a name="subdomain"></a>
+# 3. Subdomain Enum <a name="subdomain"></a>
+##### ffuf
+- `ffuf -w /usr/share/seclists/Discovery/DNS/subdomains-top1million-5000.txt -u http://cyprusbank.thm/  -H 'Host: FUZZ.cyprusbank.thm' -fw 1`
+- `ffuf -u 'http://cyprusbank.thm/' -H "Host: FUZZ.cyprusbank.thm" -w /usr/share/seclists/Discovery/DNS/subdomains-top1million-20000.txt -mc all -t 100 -ic -fw 1`
+- `ffuf -u http://test.com -c -w /usr/share/seclists/Discovery/DNS/subdomains-top1million-5000.txt -H ‘Host: FUZZ.test.com’ -fs 0 -fs 65`
+
+##### sublist3r
 - __`sudo apt-get install sublist3r`__
 - __`sublist3r -d <domain name>` or `sublist3r -d <domain name> -e google,yahoo`__
-
-```
-ffuf -w /usr/share/seclists/Discovery/DNS/subdomains-top1million-5000.txt -u http://cyprusbank.thm/  -H 'Host: FUZZ.cyprusbank.thm' -fw 1
-```
-
-# 3. Gobuster <a name="gobuster"></a>
-```
-gobuster -u http://10.10.10.68 -w /usr/share/wordlists/dirbuster/directory-list-lowercase-2.3-medium.txt
-```
-```
-gobuster dir -u <url> -k -w /usr/share/dirbuster/wordlists/directory-list-2.3-medium.txt
-```
-
-```
-gobuster dir -w /usr/share/seclists/Discovery/Web-Content/directory-list-2.3-medium.txt -u http://192.168.60.132 -t 50 -x php,txt -o  gobuster.txt
-```
-
-```
-gobuster dir -w /usr/share/wordlists/dirb/big.txt -u http://192.168.54.84 -t 100 -x .html,.txt,.php > gobuster.txt
-```  
-
-
-
-
-
-# 4. FFUF <a name="ffuf"></a>
-- FFUF is used to filter the invalid pages 
-- ```ffuf -u <url>/FUZZ -k -w /usr/share/dirbuster/wordlists/directory-list-2.3-medium.txt```
-- ```ffuf -u <url>/FUZZ -k -w /usr/share/dirbuster/wordlists/directory-list-2.3-medium.txt -r -fs 27200```
-  - if you are getting the size same of all use filter size and give the size there.
-subdomain
-```
-ffuf -u http://test.com -c -w /usr/share/seclists/Discovery/DNS/subdomains-top1million-5000.txt -H ‘Host: FUZZ.test.com’ -fs 0 -fs 65
-```
-
-```
-ffuf -u 'http://cyprusbank.thm/' -H "Host: FUZZ.cyprusbank.thm" -w /usr/share/seclists/Discovery/DNS/subdomains-top1million-20000.txt -mc all -t 100 -ic -fw 1
-```
-
-```
-ffuf -w /usr/share/seclists/Discovery/DNS/subdomains-top1million-5000.txt -u http://cyprusbank.thm/  -H 'Host: FUZZ.cyprusbank.thm' -fw 1
-```
-
-
-
-
-
-
-# 5. Nikto <a name="nikto"></a>
-- ```nikto -h http://127.0.0.1```
-
-
-
 
 
 # 6. Mysql <a name="mysql"></a>
