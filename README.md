@@ -1,4 +1,9 @@
-# Hackthebox
+
+<p align="center">
+  <img width="300" height="300" src="/Image/kali-linux.svg">
+</p>
+
+# OSCP Cheat Sheet
 
 - ```find /  -perm -u=s -type f 2>/dev/null``` to see the permission
 - `sudo -l`
