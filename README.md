@@ -98,7 +98,11 @@
 - to download a file use ```get <filename>```
 - `hydra -L /unix_users.txt -P /unix_passwords.txt 192.168.112.50 ftp`
 
-
+# 6. SSH <a name="ssh"></a>
+- `ssh admin@10.10.10.123`
+- Downloading a file from a remote system.
+  - `scp user@10.10.10.10:/home/user/secret.zip .`
+- [SSH](/ssh.md)
 
 
 
@@ -117,11 +121,7 @@
 
 
 
-# 8. SSH <a name="ssh"></a>
 
-- Downloading a file from a remote system.
-  - `scp user@10.10.10.10:/home/user/secret.zip .`
-- [SSH](/ssh.md)
 
 
 
