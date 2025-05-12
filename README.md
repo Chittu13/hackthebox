@@ -197,7 +197,7 @@ nmap -Pn -A -p 21 -T4 --script=ftp-brute.nse --script-args userdb=/root/usr 10.0
 
 
 # 10. shell upgrade <a name="shell"></a>
-
+- `export TERM=linux` or `export TERM=xterm`
 - __`python -c 'import pty; pty.spawn("/bin/bash")'`__
 
 ```
