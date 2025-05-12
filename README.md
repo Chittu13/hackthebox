@@ -15,9 +15,6 @@
 - [1. Nmap](#nmap)
 - [2. Endpoints Enum](#endpoint)
 - [3. Subdomain Enum](#subdomain)
-
-- [4. FFUF](#ffuf)
-- [5. Nikto](#nikto)
 - [6. Mysql](#mysql)
 - [7. Cewl](#cewl) - It is use to create a worldlist using website link
 - [8. SSH](#ssh)
