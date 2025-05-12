@@ -46,6 +46,7 @@
 
 ##### dirb
 - `dirb http://10.10.10.129`
+- `dirb http://10.10.1.11 -u admin:password123`
 
 ##### gobuster
 - `gobuster dir -u <url>  -w /usr/share/wordlists/seclists/Discovery/Web-Content/directory-list-2.3-medium.txt`
