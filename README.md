@@ -138,6 +138,7 @@ __Download the reverse shell in windows__
 - `ftp  192.168.112.50 21`
 - __user:anonymous__
 - __pass:__
+- `wget -r ftp://anonymous:anonymous@192.168.204.157/`
 - to upload a file use ```put <filename>```
 - to download a file use ```get <filename>```
 - `hydra -L /unix_users.txt -P /unix_passwords.txt 192.168.112.50 ftp`
