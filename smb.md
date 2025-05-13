@@ -2,17 +2,27 @@
 smbclient -L 192.168.122.148 - Here you will get sharename for example: Anonymous
 smbclient //192.168.122.148/Anonymous  - Check for the all sharename
 smbclient //10.10.62.142/<share_name> -U username
-smbclient //10.10.62.142/<share_name> -N
-smb: \> prompt OFF
-smb: \> mget *  - it will donload all the file
-or
-smbclient \\\\10.10.130.147\\Data -U thm\\guest -c 'prompt OFF;recurse ON;cd 'onboarding';lcd '/home/kali/Downloads/Reset';mget *'
 enum4linux -a 192.168.55.112
 smbclient -L 10.0.1.22 -N
 rpcclient -U "" -N 10.0.1.22
 ```
 
 
+- `smbclient //10.10.62.142/<share_name> -N`
+- `smb: \> prompt OFF`
+- `smb: \> mget *  - it will donload all the file`
+### or
+- __`smbclient \\\\10.10.130.147\\Data -U thm\\guest -c 'prompt OFF;recurse ON;cd 'onboarding';lcd '/home/kali/Downloads/Reset';mget *'`__
+
+> [!NOTE]
+> - `\10.10.130.147\Data` → Connect to the Data SMB share on the target IP.
+> - `-U thm\guest` → Login as user guest in domain thm.
+> - `-c '<commands>'` → Run SMB commands automatically (non-interactive).
+> - `prompt OFF` → Don’t ask before downloading each file.
+> - `recurse ON` → Download directories recursively.
+> - `cd onboarding` → Change to the onboarding folder on the SMB share.
+> - `lcd /home/kali/Downloads/Reset` → Set local download folder.
+> - `mget *` → Download all files from current SMB folder.
 
 
 # NetBIOS & SMB Enumberation
