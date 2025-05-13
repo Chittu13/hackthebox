@@ -21,6 +21,12 @@ perl —e 'exec "/bin/sh";'
 ```
 - `cat /etc/issue`
 
+## 🔎 Sticky Bit Directory Hunt (Privilege Escalation)
+
+```bash
+find / -perm -1000 -type d -exec ls -ld {} \; 2>/dev/null | awk '{print $1,$3,$4,$NF}'
+```
+
 > [!IMPORTANT]
 > - If you have permission to write /etc/shadow use the below commands
 > - First you need to creat a one hash password using openssl
