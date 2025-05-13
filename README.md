@@ -22,11 +22,9 @@
 - [3. Subdomain Enum](#subdomain)
 - [4. Hydra](#hydra)
 - [5.FTP](#ftp)
-- [6. Mysql](#mysql)
-- [7. Cewl](#cewl) - It is use to create a worldlist using website link
-- [8. SSH](#ssh)
-
-
+- [6. SSH](#ssh)
+- [7. Mysql](#mysql)
+- [8. Cewl](#cewl) - It is use to create a worldlist using website link
 - [11. shell upgreade](#shell)
 - [12. Post-Exploit Enumeration](#post)
 - [13. Password Cracking](/hash_cracking.md)
@@ -114,7 +112,7 @@
 
 
 
-# 6. Mysql <a name="mysql"></a>
+# 7. Mysql <a name="mysql"></a>
 - `mysql -h 10.0.1.22 -u root`
     - select 'This is a test' into outfile '/tmp/test' from mysql.user limit 1;
       - > if executed, confirms the ability to write files on the web server.
@@ -129,7 +127,7 @@
 
 
 
-# 7. Cewl <a name="cewl"></a>
+# 8. Cewl <a name="cewl"></a>
 - ```cewl -w passwords.txt http://192.168.245.48:1898/?q=node/1```
 
 
