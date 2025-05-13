@@ -5,15 +5,15 @@
 
 # OSCP Cheat Sheet
 
-- ```find /  -perm -u=s -type f 2>/dev/null``` to see the permission
-- `sudo -l`
-  
-## Find the flag file
-  - ```find / -name local.txt 2> /dev/null```
-  - `find / -iname user.txt -exec wc {} \;`
-  - `find . -name user.txt -exec wc -c {} \; -exec cat {} \;`
-  - `find / -iname root.txt -exec wc {} \;`
-  - ``` find -type d -name ".*" 2>/dev/null``` it will check hidden directories.
+> [!IMPORTANT]
+> - ```find /  -perm -u=s -type f 2>/dev/null``` to see the permission
+> - `sudo -l`
+> ## Find the flag file
+> - ```find / -name local.txt 2> /dev/null```
+> - `find / -iname user.txt -exec wc {} \;`
+> - `find . -name user.txt -exec wc -c {} \; -exec cat {} \;`
+> - `find / -iname root.txt -exec wc {} \;`
+> - ``` find -type d -name ".*" 2>/dev/null``` it will check hidden directories.
 - [Linux Forensics](/linux_forensics.md)
 - [Useful_links](/links.md)
 - [0. Service Port](/port.md)
