@@ -75,6 +75,7 @@
 - `ffuf -u http://test.com -c -w /usr/share/seclists/Discovery/DNS/subdomains-top1million-5000.txt -H ‘Host: FUZZ.test.com’ -fs 0 -fs 65`
 - `ffuf -w /usr/share/seclists/Discovery/DNS/bitquark-subdomains-top100000.txt -u http://futurevera.thm/ -H "Host: FUZZ.futurevera.thm" -fw 1 -t 100`
 - `ffuf -u http://10.10.180.79 -w /usr/share/seclists/Discovery/DNS/subdomains-top1million-20000.txt -H "HOST:FUZZ.10.10.180.79" `
+- `ffuf -w /usr/share/wordlists/seclists/Discovery/Web-Content/common.txt  -H "Host: FUZZ.futurevera.thm" -u https://10.10.180.79 -fs 4605 -c`
 
 ##### gobuster
 - `gobuster vhost -u https://futurevera.thm -w /usr/share/seclists/Discovery/DNS/subdomains-top1million-20000.txt -k --append-domain `
