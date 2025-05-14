@@ -67,7 +67,8 @@
 
 # 3. Subdomain Enum <a name="subdomain"></a>
 > [!NOTE]
-> __Sometimes Insted of domain name use ip__
+> - __Sometimes Insted of domain name use ip__
+> - Example `ffuf -w /usr/share/seclists/Discovery/DNS/bitquark-subdomains-top100000.txt -u http://10.10.180.79/ -H "Host: FUZZ.futurevera.thm" -fs 0`
 ##### ffuf
 - `ffuf -w /usr/share/seclists/Discovery/DNS/subdomains-top1million-5000.txt -u http://cyprusbank.thm/  -H 'Host: FUZZ.cyprusbank.thm' -fw 1`
 - `ffuf -u 'http://cyprusbank.thm/' -H "Host: FUZZ.cyprusbank.thm" -w /usr/share/seclists/Discovery/DNS/subdomains-top1million-20000.txt -mc all -t 100 -ic -fw 1`
