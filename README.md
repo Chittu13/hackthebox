@@ -58,6 +58,9 @@
 - `gobuster dir -w /usr/share/seclists/Discovery/Web-Content/directory-list-2.3-medium.txt -u http://192.168.60.132 -t 50 -x php,txt -o  gobuster.txt`
 - `gobuster dir -w /usr/share/wordlists/dirb/big.txt -u http://192.168.54.84 -t 100 -x .html,.txt,.php `
 
+##### dirsearch
+- `dirsearch -u https://example.com/`
+
 ##### ffuf 
 - `ffuf -u <url>/FUZZ -k -w /usr/share/dirbuster/wordlists/directory-list-2.3-medium.txt`
 - __if you are getting the size same of all use filter size and give the size there. subdomain__
