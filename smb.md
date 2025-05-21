@@ -1,7 +1,9 @@
-```
+```sh
 smbclient -L 192.168.122.148 - Here you will get sharename for example: Anonymous
 smbclient //192.168.122.148/Anonymous  - Check for the all sharename
 smbclient //10.10.62.142/<share_name> -U username
+smbmap -R anonymous -H 10.10.10.1
+smbclient //10.10.155.249/anonymous -N
 enum4linux -a 192.168.55.112
 smbclient -L 10.0.1.22 -N
 rpcclient -U "" -N 10.0.1.22
