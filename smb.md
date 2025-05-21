@@ -7,6 +7,8 @@ smbclient //10.10.155.249/anonymous -N
 enum4linux -a 192.168.55.112
 smbclient -L 10.0.1.22 -N
 rpcclient -U "" -N 10.0.1.22
+smbmap -H 10.10.10.10 -u '' -p ''9
+smbmap -H 10.10.10.10 -s share_name
 ```
 
 
