@@ -289,6 +289,32 @@ exploit
 
 # [15. Metasploit](/metasploit.md)
 
+# AWS S3 Bucket <a name="s3"></a>
+- __Target url `http://darkinjector-phish.s3-website-us-west-2.amazonaws.com/`__
+- __aws s3 ls s3://darkinjector-phish/ --region us-west-2 --no-sign-request__
+```
+┌──(root㉿kali)-[~]
+└─# aws s3 ls s3://darkinjector-phish/ --region us-west-2 --no-sign-request
+2025-03-17 06:46:17        132 captured-logins-093582390
+2025-03-17 06:25:33       2300 index.html
+
+```
+  - __It lists the files in the S3 bucket named darkinjector-phish (root folder of the bucket).__
+  - __It specifies that the bucket is in the us-west-2 region (Oregon).__
+  
+- __`aws s3 cp s3://darkinjector-phish/captured-logins-093582390 . --region us-west-2 --no-sign-request`__
+```
+┌──(root㉿kali)-[~]
+└─# aws s3 cp s3://darkinjector-phish/captured-logins-093582390 . --region us-west-2 --no-sign-request
+
+download: s3://darkinjector-phish/captured-logins-093582390 to ./captured-logins-093582390
+```
+### 📝 So this command does:
+- __✅ Downloads the file named captured-logins-093582390__
+- __✅ From the S3 bucket named darkinjector-phish__
+- __✅ To your current directory on your local system__
+- __✅ Without needing authentication (public access)__
+- __✅ In the us-west-2 region__
 
 
 
