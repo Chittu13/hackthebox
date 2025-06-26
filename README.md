@@ -31,7 +31,7 @@
 - [12. Post-Exploit Enumeration](#post)
 - [13. Password Cracking](/hash_cracking.md)
 - [14. RDP-3389](#rdp)
-- [15. Domain controler](#domain)
+- [15. Active Directory](#AD)
 - [16. Metasploit](/metasploit.md)
 - [18. Reverse_Shell_Script](#rev)
 - [19. Privilege escalation](/Privilege.md)
@@ -317,7 +317,10 @@ download: s3://darkinjector-phish/captured-logins-093582390 to ./captured-logins
 - __✅ In the us-west-2 region__
 
 
-# 15. Domain controler <a name="domain"></a>
+# 15. Active Directory <a name="AD"></a>
+- __Workstation (user)	`445, 139, 135, 3389, 5985`	✅ Uses AD services, but doesn’t host them (ONLY AD)__
+- __Domain Controller	`88, 389, 445, 3268, 464, 9389`	✅ Hosts AD services (AD with DC)__
+
 - Target
 - `nano /etc/hosts`
 - `10.10.210.170 labyrinth.thm.local thm.local thm-LABYRINTH-CA thm.local0`
