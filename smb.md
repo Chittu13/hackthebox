@@ -1,3 +1,6 @@
+- __`netexec smb dc01.vintage.htb -u P.Rosa -p Rosaisbest123`__  - NTLM (username & password directly)
+- __`netexec smb dc01.vintage.htb -u P.Rosa -p Rosaisbest123 -k `__ - Kerberos (ticket-based)
+
 ```sh
 smbclient -L 192.168.122.148 - Here you will get sharename for example: Anonymous
 smbclient //192.168.122.148/Anonymous  - Check for the all sharename
