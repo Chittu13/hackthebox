@@ -1,5 +1,16 @@
-- __`netexec smb dc01.vintage.htb -u P.Rosa -p Rosaisbest123`__  - NTLM (username & password directly)
-- __`netexec smb dc01.vintage.htb -u P.Rosa -p Rosaisbest123 -k `__ - Kerberos (ticket-based)
+```bash
+┌──(root㉿kali)-[~]
+└─# netexec smb dc01.vintage.htb -u P.Rosa -p Rosaisbest123
+SMB         10.10.11.45     445    10.10.11.45      [*]  x64 (name:10.10.11.45) (domain:10.10.11.45) (signing:True) (SMBv1:False) (NTLM:False)
+SMB         10.10.11.45     445    10.10.11.45      [-] 10.10.11.45\P.Rosa:Rosaisbest123 STATUS_NOT_SUPPORTED
+```
+- __(NTLM:False) shows that NTLM auth is disabled. I’ll try with Kerberos and it works:__
+```sh
+┌──(root㉿kali)-[~]
+└─# netexec smb dc01.vintage.htb -u P.Rosa -p Rosaisbest123 -k
+SMB         dc01.vintage.htb 445    dc01             [*]  x64 (name:dc01) (domain:vintage.htb) (signing:True) (SMBv1:False) (NTLM:False)
+SMB         dc01.vintage.htb 445    dc01             [+] vintage.htb\P.Rosa:Rosaisbest123
+```
 
 ```sh
 smbclient -L 192.168.122.148 - Here you will get sharename for example: Anonymous
