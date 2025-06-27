@@ -1,6 +1,6 @@
 
 <p align="center">
-  <img width="300" height="300" src="/Image/kali-linux.svg">
+  <img width="300" height="300" src="/Image/OSCE.svg">
 </p>
 
 # OSCP Cheat Sheet
