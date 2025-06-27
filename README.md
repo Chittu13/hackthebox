@@ -3,7 +3,7 @@
   <img width="300" height="300" src="/Image/OSCE.svg">
 </p>
 
-# OSCP Cheat Sheet
+# OSCE3 Cheat Sheet
 [bug-bounty-dorks](https://github.com/sushiwushi/bug-bounty-dorks)
 > [!IMPORTANT]
 > - ```find /  -perm -u=s -type f 2>/dev/null``` to see the permission
