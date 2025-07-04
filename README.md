@@ -25,7 +25,7 @@
 - [5. netcat](#nc)
 - [5.FTP](#ftp)
 - [6. SSH](#ssh)
-- [7. shell upgreade](#shell)
+- [7. shell upgrade](#shell)
 - [8. SMB](/smb.md)
 - [9. Mysql](#mysql)
 - [10. Cewl](#cewl) - It is use to create a worldlist using website link
