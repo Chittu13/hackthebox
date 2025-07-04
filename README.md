@@ -5,6 +5,7 @@
 
 # OSCE3 Cheat Sheet
 [bug-bounty-dorks](https://github.com/sushiwushi/bug-bounty-dorks)
+[Endpoin](/Endpoin.md)
 > [!IMPORTANT]
 > - ```find /  -perm -u=s -type f 2>/dev/null``` to see the permission
 > - `sudo -l`
