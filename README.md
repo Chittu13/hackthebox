@@ -218,6 +218,14 @@ stty raw -echo && fg
 restart
 ```
 
+### or
+```
+python3 -c 'import pty;pyt.spaw("/bin/bash")'
+export TERM=xterm
+CRTL+S
+stty raw -echo;fg
+
+```
 - [Upgrade to Fully Interactive TTY](/Notes/TTY.md)
 
 ### TTY Shell
