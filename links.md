@@ -1,6 +1,9 @@
 ### Linux Privilege Escalation
 - [gtfobins](https://gtfobins.github.io/)
 
+### Reverse Engineering
+- [dogbolt.org](https://dogbolt.org/)
+
 ### Reverse Shell
 - [revshells.com](https://www.revshells.com/)
 
