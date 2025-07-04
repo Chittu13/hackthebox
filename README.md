@@ -210,6 +210,14 @@ ssh username@target_ip #enter password if you gave any
 
 # 7. shell upgrade <a name="shell"></a>
 
+```
+SHELL=/bin/bash script -q /dev/null
+python3 -c 'import pty; pty.spawn("/bin/bash")'
+CTRL + Z
+stty raw -echo && fg
+restart
+```
+
 - [Upgrade to Fully Interactive TTY](/Notes/TTY.md)
 
 ### TTY Shell
