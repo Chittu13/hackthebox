@@ -4,6 +4,8 @@
 </p>
 
 # OSCE3 Cheat Sheet
+### ⚠️ DISCLAIMER ⚠️
+**My notes are based on my understanding and may not always be correct. Some sections are well-structured and detailed, while others are rough or unorganized. Over time, I’ll refine and improve them. The more I revisit certain topics, the clearer and more consistent my notes will become.**
 - [bug-bounty-dorks](https://github.com/sushiwushi/bug-bounty-dorks)
 - [Endpoint](/Endpoint.md)
 > [!IMPORTANT]
