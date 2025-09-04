@@ -93,4 +93,28 @@ run-shell /opt/tmux-logging/logging.tmux
 - To move between split screen
   - Ctrl+a the use arrow to move
   - Ctrl+a then press any arrow up,down,left,right
+ 
+- Copy text
+  - Enter copy mode
+    - `Ctrl+a [`
+    - Move the cursor with arrow keys to the start of the text.
+    - Press Space to begin selection.
+    - Use the arrow keys to highlight the text.
+    - Press Enter to copy the selection.
+
+- Past text
+  - Ctrl+a ]
+
+- Kill all sessions at once
+  - `tmux kill-server`
+    
+- Kill a specific session by name
+  - `tmux kill-session -t <session_name>`
+
+- Kill a single pane
+  - Ctrl+a x
+ 
+- Kill the entire window (all panes inside it)
+  - Ctrl+a Shift+&
+
 
