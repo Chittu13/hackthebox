@@ -13,7 +13,7 @@ Host: target.com
 POST /admin HTTP/1.1
 Host: target.com
 
-# Change Method to POST, HEAD, TRACE, PUT, OPTIONS
+# Change Method to POST, HEAD, TRACE, PUT, PATCH, OPTIONS
 curl -X HEAD https://target.com/admin
 ```
 
@@ -116,6 +116,15 @@ curl -H "User-Agent: Googlebot" https://target.com/admin
 
 # Try spoofing headers like X-Originating-IP, X-Real-IP, and X-Client-IP
 ```
+
+### User-Agent Fuzzing:
+```
+    User-Agent: Googlebot
+    User-Agent: InternalScanner/1.0
+    User-Agent: curl/7.64.1
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64)
+```
+
 
 ## Automation Bypass
 
