@@ -110,11 +110,14 @@ run-shell /opt/tmux-logging/logging.tmux
     
 - Kill a specific session by name
   - `tmux kill-session -t <session_name>`
+ 
+
+- close the tab 
+  - Ctrl+a Shift+&
 
 - Kill a single pane
   - Ctrl+a x
  
-- Kill the entire window (all panes inside it)
-  - Ctrl+a Shift+&
+
 
 
